@@ -1,38 +1,31 @@
 using UnityEngine;
 
-public class StaticFPSCamera : MonoBehaviour
-{
+public class StaticFPSCamera : MonoBehaviour {
+    
     [Header("Mouse Settings")]
     public float mouseSensitivity = 100f;
 
     [Header("Vertical Limits")]
-    [Tooltip("Mínimo ángulo hacia abajo")]
-    public float minPitch = -80f;
-
+    [Tooltip("Mínimo ángulo hacia abajo")] public float minPitch = -80f;
     [Tooltip("Máximo ángulo hacia arriba")]
     public float maxPitch = 80f;
 
-    float pitch = 0f;
+    private float _pitch = 0f;
 
-    void Start()
-    {
-        // Bloquea el cursor (opcional)
+    private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void Update()
-    {
+    private void Update() {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        // Rotación vertical (arriba / abajo)
-        pitch -= mouseY;
-        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
+        _pitch -= mouseY;
+        _pitch = Mathf.Clamp(_pitch, minPitch, maxPitch);
 
-        transform.localRotation = Quaternion.Euler(pitch, transform.localEulerAngles.y, 0f);
+        transform.localRotation = Quaternion.Euler(_pitch, transform.localEulerAngles.y, 0f);
 
-        // Rotación horizontal (izquierda / derecha)
         transform.Rotate(Vector3.up * mouseX, Space.World);
     }
 }
