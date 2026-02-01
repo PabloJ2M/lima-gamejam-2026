@@ -4,6 +4,7 @@ using UnityEngine;
 [Flags]
 public enum Paranoia
 {
+    None = 0,
     Exito = 1,
     Observado = 2,
     Tecnologia = 4

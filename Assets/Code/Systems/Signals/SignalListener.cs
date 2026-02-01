@@ -10,7 +10,7 @@ public class SignalListener : MonoBehaviour
     private void Awake()
     {
         _onVisualTask.Invoke(false);
-        _onAudioTask.Invoke(false);
+        //_onAudioTask.Invoke(false);
     }
     private void OnEnable() => SignalManager.onSignalEmitted += SignalEmitted;
     private void OnDisable() => SignalManager.onSignalEmitted -= SignalEmitted;
@@ -41,6 +41,6 @@ public class SignalListener : MonoBehaviour
     private void Disable()
     {
         _onVisualTask.Invoke(false);
-        _onAudioTask.Invoke(false);
+        //_onAudioTask.Invoke(false);
     }
 }

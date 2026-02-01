@@ -2122,7 +2122,7 @@ MonoBehaviour:
   _rounds: 3
   _signalsPerRound: 3
   _repeatRound: 1
-  _signalDelay: 2
+  _signalDelay: 4
   _onCompleteSequence:
     m_PersistentCalls:
       m_Calls:
@@ -9336,7 +9336,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2756710558236196383, guid: c288c9aebf72e5d4d82b6b554fb2e80d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c288c9aebf72e5d4d82b6b554fb2e80d, type: 3}
 --- !u!1 &1793093242
 GameObject:

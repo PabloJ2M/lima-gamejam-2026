@@ -10,7 +10,7 @@ public class CheckMaskSelected : MonoBehaviour
 
     public void CompareMask()
     {
-        Paranoia paranoia = (_selector.Selected) switch { 0 => Paranoia.Exito, 1 => Paranoia.Observado, 2 => Paranoia.Tecnologia, _ => Paranoia.Exito };
+        Paranoia paranoia = (_selector.Selected) switch { 0 => Paranoia.Exito, 1 => Paranoia.Observado, 2 => Paranoia.Tecnologia, _ => Paranoia.None };
         
         if (_signals.Paranoia == paranoia)
             _onSuccess.Invoke();
