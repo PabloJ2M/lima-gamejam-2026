@@ -1,34 +1,60 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class MaskSelector : MonoBehaviour
 {
-    [SerializeField] private InputActionReference _reference;
+    [SerializeField] private InputActionReference _scroll, _press;
     [SerializeField] private Animator _anim;
     [SerializeField] private Image _indicator;
     [SerializeField] private Material _mat;
     [SerializeField] private Mask[] _masks;
 
+    private int _index;
+
     public int Selected { get; private set; } = -1;
     public bool CanSelectMask { private get; set; }
 
-    private void Awake() => _reference.action.performed += Performe;
-    private void OnEnable() => _reference.action.Enable();
-    private void OnDisable() => _reference.action.Disable();
+    private void Awake()
+    {
+        _press.action.performed += PerformePress;
+        _scroll.action.performed += PerformeScroll;
+    }
+    private void OnEnable()
+    {
+        _press.asset.Enable();
+        _scroll.action.Enable();
+    }
+    private void OnDisable()
+    {
+        _press.action.Disable();
+        _scroll.action.Disable();
+    }
 
-    private void Performe(InputAction.CallbackContext ctx)
+    private void PerformeScroll(InputAction.CallbackContext ctx)
+    {
+        if (ctx.ReadValue<float>() > 0)
+            _index++;
+        else if (ctx.ReadValue<float>() < 0)
+            _index--;
+
+        if (_index < 0) _index = _masks.Length - 1;
+        if (_index >= _masks.Length) _index = 0;
+        _indicator.sprite = _masks[_index].Sprite;
+    }
+    private void PerformePress(InputAction.CallbackContext ctx)
     {
         if (!CanSelectMask) return;
 
         bool isPressed = ctx.action.IsPressed();
-        int index = isPressed ? (int)ctx.ReadValue<float>() : -1;
+        int index = isPressed ? _index : -1;
 
         if (isPressed) {
             if (!_masks[index].SelectMask()) return;
             _anim.SetBool("Use", true);
             _mat.SetTexture("_MainTex", _masks[index].Texture);
-            _indicator.sprite = _masks[index].Sprite;
+            SoundManager.Instance.PlaySound("PutMaskOn");
         }
         else TakeOff();
 
@@ -40,5 +66,6 @@ public class MaskSelector : MonoBehaviour
         if (Selected < 0) return;
         _masks[Selected].DeselectMask();
         _anim.SetBool("Use", false);
+        SoundManager.Instance.PlaySound("TakeMaskOff");
     }
 }

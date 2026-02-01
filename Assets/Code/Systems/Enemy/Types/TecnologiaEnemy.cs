@@ -2,8 +2,7 @@ using System.Collections;
 using PrimeTween;
 using UnityEngine;
 
-public class ObservadoEnemy : EnemyBase {
-    
+public class TecnologiaEnemy : EnemyBase {
     protected override void OnAppear() {
         StartCoroutine(AppearRoutine());
     }
@@ -12,7 +11,7 @@ public class ObservadoEnemy : EnemyBase {
         transform.position = new Vector3(-9f, 0f, 5f);
         Tween.Position(transform, new Vector3(0f, 0f, 5f), 1);
         yield return new WaitForSeconds(2f);
-        
+
         if(isMaskCorrect)
             yield return StartCoroutine(LeaveRoutine());
         else

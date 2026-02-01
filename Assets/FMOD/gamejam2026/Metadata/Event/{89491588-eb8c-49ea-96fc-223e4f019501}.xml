@@ -80,7 +80,7 @@
 	</object>
 	<object class="SingleSound" id="{37ea2f5d-211f-40dc-a294-5d3a13c363ea}">
 		<property name="length">
-			<value>4</value>
+			<value>5.293145833333333</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{98ba747c-18b0-4b5d-b04c-3355ded5b7e9}</destination>

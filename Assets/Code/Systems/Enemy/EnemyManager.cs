@@ -4,37 +4,51 @@ using UnityEngine.Events;
 public class EnemyManager : MonoBehaviour {
     [SerializeField] private EnemyBase[] enemies;
 
+    [Header("Enemy Result Events")]
+    [SerializeField] private UnityEvent onEnemyPassed;
+    [SerializeField] private UnityEvent onEnemyAttacked;
+
     private EnemyBase _currentEnemy;
-    
-    [SerializeField] private UnityEvent onEnemyFinished;
-    
+    public Paranoia PendingParanoia { get; set; }
+
     private void Awake() {
         foreach(EnemyBase enemy in enemies) {
             enemy.gameObject.SetActive(false);
-            enemy.OnEnemyFinished += OnEnemyFinished;
+            enemy.OnEnemyResolved += OnEnemyResolved;
         }
     }
 
-    public void SpawnEnemy(Paranoia paranoia) {
-        _currentEnemy = GetEnemyForParanoia(paranoia);
-        _currentEnemy.Activate();
+    public void ActivateEnemy(bool maskCorrect) {
+        _currentEnemy = FindEnemyForParanoia(PendingParanoia);
+
+        if(_currentEnemy == null) {
+            Debug.LogError($"No enemy for paranoia {PendingParanoia}");
+            return;
+        }
+
+        _currentEnemy.Activate(maskCorrect);
     }
 
-    public void ResolveMask(bool success) {
-        _currentEnemy?.ResolveMask(success);
-    }
-
-    private void OnEnemyFinished(EnemyBase enemy) {
-        _currentEnemy = null;
-        onEnemyFinished.Invoke();
-    }
-
-    private EnemyBase GetEnemyForParanoia(Paranoia paranoia) {
+    private EnemyBase FindEnemyForParanoia(Paranoia paranoia) {
         foreach(EnemyBase enemy in enemies) {
-            if(enemy.name.Contains(paranoia.ToString()))
+            if(enemy.EnemyType == paranoia)
                 return enemy;
         }
 
         return null;
     }
+
+    private void OnEnemyResolved(EnemyBase enemy, EnemyResult result) {
+        _currentEnemy = null;
+
+        if(result == EnemyResult.Success)
+            onEnemyPassed?.Invoke();
+        else
+            onEnemyAttacked?.Invoke();
+    }
+}
+
+public enum EnemyResult {
+    Success, // pasó de frente
+    Failed // atacó
 }

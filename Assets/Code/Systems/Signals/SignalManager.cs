@@ -18,20 +18,22 @@ public class SignalManager : MonoBehaviour
 
     public Paranoia Paranoia { get; private set; }
     public static event Action<Signal, bool> onSignalEmitted;
+    
+    [SerializeField] private EnemyManager enemyManager;
 
-    public void DisplayRandomParanoia()
-    {
+    public void DisplayRandomParanoia() {
         _onStart.Invoke();
 
-        switch (Random.Range(0, 3))
-        {
+        switch(Random.Range(0, 3)) {
             case 0: Paranoia = Paranoia.Exito; break;
             case 1: Paranoia = Paranoia.Observado; break;
             case 2: Paranoia = Paranoia.Tecnologia; break;
         }
 
+        enemyManager.PendingParanoia = Paranoia;
         DisplayParanoia(Paranoia);
     }
+    
     public void DisplayParanoia(Paranoia paranoia)
     {
         StopAllCoroutines();
