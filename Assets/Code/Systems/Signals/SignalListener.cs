@@ -26,14 +26,14 @@ public class SignalListener : MonoBehaviour
 
     private void ExcecuteAll()
     {
-        print($"real signal emitted in {name}");
+        print($"real signal emitted in <color=green>{name}</color>");
 
         _onVisualTask.Invoke(true);
         _onAudioTask.Invoke(true);
     }
     private void ExecuteRandom()
     {
-        print($"fake signal emitted in {name}");
+        print($"fake signal emitted in <color=red>{name}</color>");
 
         if (Random.value > 0.5f) _onVisualTask.Invoke(true);
         else _onAudioTask.Invoke(true);

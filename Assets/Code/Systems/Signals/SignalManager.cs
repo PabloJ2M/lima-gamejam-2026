@@ -19,13 +19,18 @@ public class SignalManager : MonoBehaviour
 
     public void DisplayRandomParanoia()
     {
-        DisplayParanoia((Paranoia)Random.Range(0, 3));
+        switch (Random.Range(0, 3))
+        {
+            case 0: DisplayParanoia(Paranoia.Exito); break;
+            case 1: DisplayParanoia(Paranoia.Observado); break;
+            case 2: DisplayParanoia(Paranoia.Tecnologia); break;
+        }
     }
     public void DisplayParanoia(Paranoia paranoia)
     {
         StopAllCoroutines();
         StartCoroutine(StartSignalSequence(paranoia));
-        print($"started signal sequence for { paranoia }");
+        print($"started signal sequence for { paranoia.ToString() }");
     }
 
     private IEnumerator StartSignalSequence(Paranoia paranoia)
@@ -34,6 +39,7 @@ public class SignalManager : MonoBehaviour
 
         var allSignals = _collection.GetSignals();
         var possibleTrueSignals = _collection.GetSignalsByType(paranoia).ToList();
+        print(string.Join(",", possibleTrueSignals));
 
         possibleTrueSignals.InterleaveShuffle();
 
@@ -63,9 +69,11 @@ public class SignalManager : MonoBehaviour
                 }
             }
 
+            print("-----------complete round-----------");
             yield return delay;
         }
 
+        print("--------complete sequence---------");
         _onCompleteSequence.Invoke();
     }
 }
