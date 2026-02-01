@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MaskSelector : MonoBehaviour
 {
     [SerializeField] private InputActionReference _reference;
     [SerializeField] private Animator _anim;
+    [SerializeField] private Image _indicator;
+    [SerializeField] private Material _mat;
     [SerializeField] private Mask[] _masks;
 
     public int Selected { get; private set; } = -1;
@@ -24,6 +27,8 @@ public class MaskSelector : MonoBehaviour
         if (isPressed) {
             if (!_masks[index].SelectMask()) return;
             _anim.SetBool("Use", true);
+            _mat.SetTexture("_MainTex", _masks[index].Texture);
+            _indicator.sprite = _masks[index].Sprite;
         }
         else TakeOff();
 

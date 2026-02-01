@@ -3,8 +3,12 @@ using UnityEngine;
 public class Mask : MonoBehaviour
 {
     [SerializeField] private float _recoveryTime;
+    [SerializeField] private Texture _texture;
+    [SerializeField] private Sprite _sprite; 
     [SerializeField] private GameObject _container;
 
+    public Texture Texture => _texture;
+    public Sprite Sprite => _sprite;
     private float _recovery;
 
     private void Update()
