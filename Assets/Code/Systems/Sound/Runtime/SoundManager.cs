@@ -93,15 +93,8 @@ public class SoundManager : MonoBehaviour
         return true;
     }
 
-    public StudioEventEmitter InitializeEventEmitter(string name, GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(string name, StudioEventEmitter emitter)
     {
-        StudioEventEmitter emitter = emitterGameObject?.GetComponent<StudioEventEmitter>();
-        
-        if(emitter == null)
-        {
-            return null;
-        }
-
         if (!SoundLoader.TryGetEvent(name, out EventReference reference))
         {
             return null;
@@ -126,6 +119,7 @@ public class SoundManager : MonoBehaviour
         SerializableGuid guid = new SerializableGuid(Guid.NewGuid());
 
         eventInstances.Add(guid, instance);
+        instance.start();
 
         return new SoundInstance
         {

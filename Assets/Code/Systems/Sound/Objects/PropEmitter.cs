@@ -20,6 +20,6 @@ public class PropEmitter : MonoBehaviour
     public void Play()
     {
         string soundName = sounds[Random.Range(0, sounds.Length)];
-        SoundManager.Instance.InitializeEventEmitter(soundName, gameObject);
+        SoundManager.Instance.InitializeEventEmitter(soundName, emitter);
     }
 }

@@ -51,7 +51,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &-6684382962777175521
@@ -157,11 +157,11 @@ MonoBehaviour:
   - {fileID: 7956308832572509940}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
-  Length: 3400
+  Length: 3000
 --- !u!114 &-4830080519570907799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639055474591907945
+  lastModified: 639055517067770779
   FileSizes:
   - Name: Desktop
     Value: 591488
@@ -206,7 +206,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 6000
 --- !u!114 &-4366920123280928149
@@ -287,7 +287,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 2000
 --- !u!114 &-2515981527617844766
@@ -314,7 +314,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 2000
 --- !u!114 &-1636180192632215931
@@ -341,7 +341,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 6000
 --- !u!114 &-1289555359228828412
@@ -395,7 +395,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &-931318019280480074
@@ -422,7 +422,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &-413601856357409307
@@ -508,7 +508,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1145890156175936500}
   cacheVersion: 131858
-  cacheTime: 639055493539168642
+  cacheTime: 639055528751542706
   SerializableEventsDict:
   - key: event:/Ambience/Global
     index: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 4000
 --- !u!114 &366079956822840677
@@ -641,7 +641,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055474586617375
+  lastModified: 639055517056243345
   FileSizes:
   - Name: Desktop
     Value: 2304
@@ -670,7 +670,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &1888903805172794687
@@ -697,7 +697,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 6000
 --- !u!114 &2494725812383594129
@@ -724,7 +724,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 4000
 --- !u!114 &2886000560854613611
@@ -751,7 +751,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &3952420312979259863
@@ -832,7 +832,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 2000
 --- !u!114 &4631885472568381559
@@ -877,7 +877,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639055474586448713
+  lastModified: 639055517055029574
   FileSizes:
   - Name: Desktop
     Value: 241920
@@ -906,7 +906,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &5842538175484244279
@@ -960,7 +960,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &6967323997570523186
@@ -978,7 +978,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639055474586607265
+  lastModified: 639055517056193399
   FileSizes:
   - Name: Desktop
     Value: 1524
@@ -998,10 +998,10 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639055493539168642
+  lastModified: 639055528751542706
   FileSizes:
   - Name: Desktop
-    Value: 952480
+    Value: 952352
   Exists: 1
 --- !u!114 &8468409731891964144
 MonoBehaviour:
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 3000
 --- !u!114 &8530648533621793282
@@ -1054,6 +1054,6 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 4000

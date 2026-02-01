@@ -13,7 +13,7 @@ public class ObjectEmitter : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.Instance.InitializeEventEmitter(soundName, gameObject);
+        SoundManager.Instance.InitializeEventEmitter(soundName, emitter);
         emitter.Play();
     }
 }
