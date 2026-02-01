@@ -13,6 +13,7 @@ public class SignalManager : MonoBehaviour
     [SerializeField] private int _signalsPerRound = 3, _repeatRound = 2;
 
     [SerializeField] private float _signalDelay;
+    [SerializeField] private UnityEvent _onStart;
     [SerializeField] private UnityEvent _onCompleteSequence;
 
     public Paranoia Paranoia { get; private set; }
@@ -20,6 +21,8 @@ public class SignalManager : MonoBehaviour
 
     public void DisplayRandomParanoia()
     {
+        _onStart.Invoke();
+
         switch (Random.Range(0, 3))
         {
             case 0: Paranoia = Paranoia.Exito; break;
