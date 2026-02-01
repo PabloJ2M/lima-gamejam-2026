@@ -25,20 +25,24 @@ public class SignalListener : MonoBehaviour
         Invoke(nameof(Disable), _duration);
     }
 
-    private void ExcecuteAll()
-    {
-        print($"real signal emitted in <color=green>{name}</color>");
-
+    private void ExcecuteAll() {
         _onVisualTask.Invoke(true);
         _onAudioTask.Invoke(true);
-    }
-    private void ExecuteRandom()
-    {
-        print($"fake signal emitted in <color=red>{name}</color>");
 
-        if (Random.value > 0.5f) _onVisualTask.Invoke(true);
-        else _onAudioTask.Invoke(true);
+        print($"real signal emitted in <color=green>{name}</color>");
     }
+
+    private void ExecuteRandom() {
+        bool result = Random.value > 0.5f;
+        if(result)
+            _onVisualTask.Invoke(true);
+        else
+            _onAudioTask.Invoke(true);
+
+        string resultTask = result ? "VisualTask" : "AudioTask";
+        print($"fake signal emitted in <color=red>{name}</color> {resultTask}");
+    }
+    
     private void Disable()
     {
         _onVisualTask.Invoke(false);
