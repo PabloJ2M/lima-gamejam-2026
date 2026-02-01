@@ -1,4 +1,5 @@
 using System.Collections;
+using PrimeTween;
 using UnityEngine;
 
 public class ObservadoEnemy : EnemyBase {
@@ -7,9 +8,14 @@ public class ObservadoEnemy : EnemyBase {
     }
 
     private IEnumerator AppearRoutine() {
-        // entra y observa
+        transform.position = new Vector3(-9f, 0f, 5f);
+        Tween.Position(transform, new Vector3(0f, 0f, 5f), 1);
         yield return new WaitForSeconds(2f);
-        // se queda esperando la máscara
+        if(correctMask) {
+            OnMaskSuccess();
+        } else  {
+            OnMaskFailed();
+        }
     }
 
     protected override void OnMaskSuccess() {
@@ -21,13 +27,13 @@ public class ObservadoEnemy : EnemyBase {
     }
 
     private IEnumerator LeaveRoutine() {
-        // mira un momento y se va
+        Tween.Position(transform, new Vector3(9f, 0f, 5f), 1);
         yield return new WaitForSeconds(1.5f);
         Finish();
     }
 
     private IEnumerator AttackRoutine() {
-        // ataque
+        Tween.Position(transform, new Vector3(0f, 0f, 0f), 1);
         yield return new WaitForSeconds(3f);
         Finish();
     }
