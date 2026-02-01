@@ -8454,7 +8454,7 @@ GameObject:
   - component: {fileID: 1289866988}
   - component: {fileID: 1289866989}
   m_Layer: 0
-  m_Name: ObservadoEnemy (1)
+  m_Name: ExitoEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8485,7 +8485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1289866987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374468023639c9144b34bbc1d0eca654, type: 3}
+  m_Script: {fileID: 11500000, guid: aa237c01eadefdf49bee758a44adfeb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   typeEnemy: 1
@@ -8763,28 +8763,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362875057}
-  - component: {fileID: 1362875056}
+  - component: {fileID: 1362875058}
   m_Layer: 0
-  m_Name: ObservadoEnemy (2)
+  m_Name: TecnologiaEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1362875056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362875055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374468023639c9144b34bbc1d0eca654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeEnemy: 4
-  correctMask: 0
 --- !u!4 &1362875057
 Transform:
   m_ObjectHideFlags: 0
@@ -8801,6 +8787,20 @@ Transform:
   - {fileID: 786803304}
   m_Father: {fileID: 1815195592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1362875058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362875055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec36943af85234495c8b3e2760c38f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeEnemy: 4
+  correctMask: 0
 --- !u!1 &1367016704
 GameObject:
   m_ObjectHideFlags: 0
@@ -10351,7 +10351,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1656607775}
   - {fileID: 1289866989}
-  - {fileID: 1362875056}
+  - {fileID: 1362875058}
 --- !u!4 &1815195592
 Transform:
   m_ObjectHideFlags: 0
