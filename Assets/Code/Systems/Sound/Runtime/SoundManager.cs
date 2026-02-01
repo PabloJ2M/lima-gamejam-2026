@@ -93,7 +93,7 @@ public class SoundManager : MonoBehaviour
         return true;
     }
 
-    private StudioEventEmitter InitializeEventEmitter(string name, GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(string name, GameObject emitterGameObject)
     {
         StudioEventEmitter emitter = emitterGameObject?.GetComponent<StudioEventEmitter>();
         
