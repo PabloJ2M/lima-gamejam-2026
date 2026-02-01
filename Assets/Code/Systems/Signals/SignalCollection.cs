@@ -10,8 +10,7 @@ public class SignalCollection : ScriptableObject
     public IReadOnlyCollection<Signal> GetSignalsByType(Paranoia paranoia)
     {
         var signals = GetSignals();
-        signals.Where(x => x.Paranoia.HasFlag(paranoia));
-        return signals;
+        return signals.Where(x => x.Paranoia.HasFlag(paranoia)).ToList();
     }
 
     public IReadOnlyCollection<Signal> GetSignals()
