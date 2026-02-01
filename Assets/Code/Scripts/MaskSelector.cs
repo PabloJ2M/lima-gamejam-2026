@@ -1,12 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Animations.Rigging;
-using PrimeTween;
 
 public class MaskSelector : MonoBehaviour
 {
     [SerializeField] private InputActionReference _reference;
-    [SerializeField] private Rig _rig;
+    [SerializeField] private Animator _anim;
     [SerializeField] private Mask[] _masks;
 
     public int Selected { get; private set; } = -1;
@@ -25,7 +23,7 @@ public class MaskSelector : MonoBehaviour
 
         if (isPressed) {
             if (!_masks[index].SelectMask()) return;
-            Tween.Custom(0, 1, 0.5f, (float f) => _rig.weight = f);
+            _anim.SetBool("Use", true);
         }
         else TakeOff();
 
@@ -36,6 +34,6 @@ public class MaskSelector : MonoBehaviour
     {
         if (Selected < 0) return;
         _masks[Selected].DeselectMask();
-        Tween.Custom(1, 0, 0.5f, (float f) => _rig.weight = f);
+        _anim.SetBool("Use", false);
     }
 }
