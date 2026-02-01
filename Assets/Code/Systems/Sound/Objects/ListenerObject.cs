@@ -9,6 +9,6 @@ public class ListenerObject : MonoBehaviour
     private void Update()
     {
         Vector3 cameraForward = camera.State.GetFinalOrientation() * Vector3.forward;
-        transform.localPosition = cameraForward.normalized * distance;
+        transform.position = transform.parent.position + cameraForward.normalized * distance;
     }
 }

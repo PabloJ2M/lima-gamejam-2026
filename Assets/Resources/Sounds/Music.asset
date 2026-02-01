@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2996d3994c744143aee7fdfc973feee, type: 3}
+  m_Name: Music
+  m_EditorClassIdentifier: 
+  References:
+  - Name: EndGame
+    SoundEvent:
+      Guid:
+        Data1: -1630706274
+        Data2: 1229185401
+        Data3: 1106019499
+        Data4: -1474870479
+      Path: event:/Music/EndGame
+  - Name: GameOver
+    SoundEvent:
+      Guid:
+        Data1: 1795324672
+        Data2: 1299322668
+        Data3: -320264829
+        Data4: -1797963310
+      Path: event:/Music/GameOver
+  - Name: Loading
+    SoundEvent:
+      Guid:
+        Data1: 164403088
+        Data2: 1080668018
+        Data3: 1277686449
+        Data4: -2089537947
+      Path: event:/Music/LoadingScreen
+  - Name: Start
+    SoundEvent:
+      Guid:
+        Data1: 546976033
+        Data2: 1212060172
+        Data3: -1888091737
+        Data4: -1603295680
+      Path: event:/Music/StartScreen
+  - Name: Win
+    SoundEvent:
+      Guid:
+        Data1: 968730023
+        Data2: 1208742534
+        Data3: 907995017
+        Data4: -2071904346
+      Path: event:/Music/Win

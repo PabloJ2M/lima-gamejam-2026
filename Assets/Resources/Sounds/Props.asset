@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2996d3994c744143aee7fdfc973feee, type: 3}
+  m_Name: Props
+  m_EditorClassIdentifier: 
+  References:
+  - Name: Board1
+    SoundEvent:
+      Guid:
+        Data1: -1991699064
+        Data2: 1240132492
+        Data3: 1042480278
+        Data4: 26542415
+      Path: event:/SFX/Props/Board/Board1
+  - Name: Board2
+    SoundEvent:
+      Guid:
+        Data1: -1231610114
+        Data2: 1221002758
+        Data3: -186595180
+        Data4: 1229757616
+      Path: event:/SFX/Props/Board/Board2
+  - Name: Board3
+    SoundEvent:
+      Guid:
+        Data1: -1942239770
+        Data2: 1305173475
+        Data3: -1794088277
+        Data4: -796372099
+      Path: event:/SFX/Props/Board/Board3
+  - Name: Fan1
+    SoundEvent:
+      Guid:
+        Data1: 540678284
+        Data2: 1126099938
+        Data3: 1472034979
+        Data4: 647525498
+      Path: event:/SFX/Props/Fan/Fan1
+  - Name: Fan2
+    SoundEvent:
+      Guid:
+        Data1: -1259149791
+        Data2: 1109884284
+        Data3: -1195346033
+        Data4: -1568065513
+      Path: event:/SFX/Props/Fan/Fan2
+  - Name: Fan3
+    SoundEvent:
+      Guid:
+        Data1: 638302035
+        Data2: 1225863426
+        Data3: -1083871573
+        Data4: -1930291864
+      Path: event:/SFX/Props/Fan/Fan3
+  - Name: Fluorescent1
+    SoundEvent:
+      Guid:
+        Data1: -753436759
+        Data2: 1256514673
+        Data3: 554065334
+        Data4: -1101949610
+      Path: event:/SFX/Props/Fluorescent/Fluorescent1
+  - Name: Fluorescent2
+    SoundEvent:
+      Guid:
+        Data1: -1519828831
+        Data2: 1251561501
+        Data3: 1703602861
+        Data4: -1067977863
+      Path: event:/SFX/Props/Fluorescent/Fluorescent2
+  - Name: Fluorescent3
+    SoundEvent:
+      Guid:
+        Data1: -2102186078
+        Data2: 1242077907
+        Data3: 1785406097
+        Data4: -1352876748
+      Path: event:/SFX/Props/Fluorescent/Fluorescent3
+  - Name: Radio1
+    SoundEvent:
+      Guid:
+        Data1: 537842867
+        Data2: 1089279789
+        Data3: -1439818817
+        Data4: -537093243
+      Path: event:/SFX/Props/Radio/Radio1
+  - Name: Radio2
+    SoundEvent:
+      Guid:
+        Data1: -181245880
+        Data2: 1298120641
+        Data3: 1349830286
+        Data4: 290966550
+      Path: event:/SFX/Props/Radio/Radio2
+  - Name: Radio3
+    SoundEvent:
+      Guid:
+        Data1: -1428025118
+        Data2: 1336827056
+        Data3: 1811590572
+        Data4: 1168379853
+      Path: event:/SFX/Props/Radio/Radio3
+  - Name: TV1
+    SoundEvent:
+      Guid:
+        Data1: 1962939885
+        Data2: 1147517039
+        Data3: 1866473660
+        Data4: -2137016729
+      Path: event:/SFX/Props/TV/TV1
+  - Name: TV2
+    SoundEvent:
+      Guid:
+        Data1: -432753049
+        Data2: 1153326711
+        Data3: 2027410356
+        Data4: -162364442
+      Path: event:/SFX/Props/TV/TV2
+  - Name: TV3
+    SoundEvent:
+      Guid:
+        Data1: -1932737904
+        Data2: 1147883682
+        Data3: 1719547310
+        Data4: -458130756
+      Path: event:/SFX/Props/TV/TV3
+  - Name: Window1
+    SoundEvent:
+      Guid:
+        Data1: 748018160
+        Data2: 1092228387
+        Data3: 335882141
+        Data4: -794615260
+      Path: event:/SFX/Props/Window/Window1
+  - Name: Window2
+    SoundEvent:
+      Guid:
+        Data1: -1496490046
+        Data2: 1229478005
+        Data3: 769367700
+        Data4: 399094146
+      Path: event:/SFX/Props/Window/Window2
+  - Name: Window3
+    SoundEvent:
+      Guid:
+        Data1: -227822629
+        Data2: 1327308800
+        Data3: -526844761
+        Data4: 805608211
+      Path: event:/SFX/Props/Window/Window3
