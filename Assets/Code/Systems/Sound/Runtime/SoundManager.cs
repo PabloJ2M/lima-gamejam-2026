@@ -93,22 +93,17 @@ public class SoundManager : MonoBehaviour
         return true;
     }
 
-    public StudioEventEmitter InitializeEventEmitter(string name, GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(string name, StudioEventEmitter emitter)
     {
-        StudioEventEmitter emitter = emitterGameObject?.GetComponent<StudioEventEmitter>();
-        
-        if(emitter == null)
-        {
-            return null;
-        }
-
         if (!SoundLoader.TryGetEvent(name, out EventReference reference))
         {
             return null;
         }
 
         emitter.EventReference = reference;
-        eventEmitters.Add(emitter);
+        if(!eventEmitters.Contains(emitter)) eventEmitters.Add(emitter);
+
+        emitter.Play();
         return emitter;
     }
 
@@ -124,6 +119,7 @@ public class SoundManager : MonoBehaviour
         SerializableGuid guid = new SerializableGuid(Guid.NewGuid());
 
         eventInstances.Add(guid, instance);
+        instance.start();
 
         return new SoundInstance
         {
@@ -145,7 +141,7 @@ public class SoundManager : MonoBehaviour
         instance.release();
     }
 
-    public void SetAmbience(string name)
+    public void StopAmbience()
     {
         if (setAmbience)
         {
@@ -153,6 +149,11 @@ public class SoundManager : MonoBehaviour
             StopSound(ambienceId);
             ambienceId = default;
         }
+    }
+
+    public void SetAmbience(string name)
+    {
+        StopAmbience();
 
         SoundInstance instance = PlaySound(name);
         if(instance.status == SoundInstance.STATUS.ERROR)
@@ -164,7 +165,7 @@ public class SoundManager : MonoBehaviour
         ambienceId = instance.Id;
     }
 
-    public void SetMusic(string name)
+    public void StopMusic()
     {
         if (setMusic)
         {
@@ -172,6 +173,11 @@ public class SoundManager : MonoBehaviour
             StopSound(musicId);
             musicId = default;
         }
+    }
+
+    public void SetMusic(string name)
+    {
+        StopMusic();
 
         SoundInstance instance = PlaySound(name);
         if (instance.status == SoundInstance.STATUS.ERROR)

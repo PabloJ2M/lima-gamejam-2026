@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2996d3994c744143aee7fdfc973feee, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  References:
+  - Name: Alarm
+    SoundEvent:
+      Guid:
+        Data1: 327091268
+        Data2: 1174727741
+        Data3: -1811048783
+        Data4: 1747380305
+      Path: event:/SFX/Player/Alarm
+  - Name: Breath
+    SoundEvent:
+      Guid:
+        Data1: -353732796
+        Data2: 1230839744
+        Data3: 691508620
+        Data4: 1881845015
+      Path: event:/SFX/Player/BreathLOOP
+  - Name: Chair1
+    SoundEvent:
+      Guid:
+        Data1: 639142888
+        Data2: 1249130653
+        Data3: 1425253771
+        Data4: -1579603701
+      Path: event:/SFX/Player/ChairSqueak1
+  - Name: Chair2
+    SoundEvent:
+      Guid:
+        Data1: 2144157957
+        Data2: 1324730221
+        Data3: 1256180877
+        Data4: 1462371647
+      Path: event:/SFX/Player/ChairSqueak2
+  - Name: Chair3
+    SoundEvent:
+      Guid:
+        Data1: 1696209307
+        Data2: 1134760454
+        Data3: 1098097809
+        Data4: 1021533344
+      Path: event:/SFX/Player/ChairSqueak3
+  - Name: PutMaskOn
+    SoundEvent:
+      Guid:
+        Data1: 920614623
+        Data2: 1187932142
+        Data3: -1828214650
+        Data4: -1654383985
+      Path: event:/SFX/Player/PutMaskOn
+  - Name: TakeMaskOff
+    SoundEvent:
+      Guid:
+        Data1: -775431618
+        Data2: 1088407230
+        Data3: -1860138600
+        Data4: 1047007465
+      Path: event:/SFX/Player/TakeMaskOff
