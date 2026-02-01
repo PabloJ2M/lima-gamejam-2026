@@ -232,7 +232,7 @@ MonoBehaviour:
   defaultAmbienceVolume: 1
   defaultMusicVolume: 1
   defaultSFXVolume: 1
-  defaultAmbience: 
+  defaultAmbience: Global
   defaultMusic: 
 --- !u!4 &387456084
 Transform:
