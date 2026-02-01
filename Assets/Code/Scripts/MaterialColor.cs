@@ -2,22 +2,17 @@ using UnityEngine;
 
 public class MaterialColor : MonoBehaviour
 {
-    [SerializeField] private Color _color;
-
-    private const string _id = "_BaseColor";
+    [SerializeField] private int _index;
+    private const string _id = "_EMISSION";
     private Material _material;
-    private Color _baseColor;
 
-    private void Awake() => _material = GetComponent<MeshRenderer>().material;
-    private void Start() => _baseColor = _material.color;
+    private void Awake() => _material = GetComponent<MeshRenderer>().materials[_index];
 
-    public void DisplayColor()
+    public void DisplayColor(bool enable)
     {
-        _material.SetColor(_id, _color);
-        Invoke(nameof(ResetColor), 1f);
-    }
-    private void ResetColor()
-    {
-        _material.SetColor(_id, _baseColor);
+        if (enable)
+            _material.EnableKeyword(_id);
+        else
+            _material.DisableKeyword(_id);
     }
 }
