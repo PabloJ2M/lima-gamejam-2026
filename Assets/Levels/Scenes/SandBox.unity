@@ -904,33 +904,9 @@ MonoBehaviour:
   _onSuccess:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 120687039}
-        m_TargetAssemblyTypeName: MaskSelector, Assembly-CSharp
-        m_MethodName: TakeOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 715722086}
-        m_TargetAssemblyTypeName: SignalManager, Assembly-CSharp
-        m_MethodName: DisplayRandomParanoia
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1815195591}
         m_TargetAssemblyTypeName: EnemyManager, Assembly-CSharp
-        m_MethodName: ActiveEnemy
+        m_MethodName: ActivateEnemy
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -943,21 +919,9 @@ MonoBehaviour:
   _onMissed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650314301}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1815195591}
         m_TargetAssemblyTypeName: EnemyManager, Assembly-CSharp
-        m_MethodName: ActiveEnemy
+        m_MethodName: ActivateEnemy
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8488,8 +8452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa237c01eadefdf49bee758a44adfeb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeEnemy: 1
-  correctMask: 0
+  enemyType: 1
 --- !u!4 &1320934383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8249276571758915617, guid: e4a8053899f223f4e817d81246d54c84, type: 3}
@@ -8799,8 +8762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dec36943af85234495c8b3e2760c38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeEnemy: 4
-  correctMask: 0
+  enemyType: 4
 --- !u!1 &1367016704
 GameObject:
   m_ObjectHideFlags: 0
@@ -9724,8 +9686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374468023639c9144b34bbc1d0eca654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeEnemy: 2
-  correctMask: 0
+  enemyType: 2
 --- !u!1 &1657318231
 GameObject:
   m_ObjectHideFlags: 0
@@ -10352,6 +10313,48 @@ MonoBehaviour:
   - {fileID: 1656607775}
   - {fileID: 1289866989}
   - {fileID: 1362875058}
+  onEnemyPassed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 120687039}
+        m_TargetAssemblyTypeName: MaskSelector, Assembly-CSharp
+        m_MethodName: TakeOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 715722086}
+        m_TargetAssemblyTypeName: SignalManager, Assembly-CSharp
+        m_MethodName: DisplayRandomParanoia
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnemyAttacked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1650314301}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1815195592
 Transform:
   m_ObjectHideFlags: 0

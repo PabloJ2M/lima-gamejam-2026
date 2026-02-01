@@ -4,41 +4,51 @@ using UnityEngine.Events;
 public class EnemyManager : MonoBehaviour {
     [SerializeField] private EnemyBase[] enemies;
 
-    private EnemyBase _currentEnemy;
-    
-    public Paranoia CurrentParanoia { get; set; }
+    [Header("Enemy Result Events")]
+    [SerializeField] private UnityEvent onEnemyPassed;
+    [SerializeField] private UnityEvent onEnemyAttacked;
 
-    // [SerializeField] private UnityEvent _onSuccess;
+    private EnemyBase _currentEnemy;
+    public Paranoia PendingParanoia { get; set; }
 
     private void Awake() {
         foreach(EnemyBase enemy in enemies) {
             enemy.gameObject.SetActive(false);
-            enemy.OnEnemyFinished += OnEnemyFinished;
+            enemy.OnEnemyResolved += OnEnemyResolved;
         }
     }
 
-    public void ActiveEnemy(bool success) {
-        _currentEnemy = GetEnemyByParanoia(CurrentParanoia);
+    public void ActivateEnemy(bool maskCorrect) {
+        _currentEnemy = FindEnemyForParanoia(PendingParanoia);
 
         if(_currentEnemy == null) {
-            Debug.LogError($"No enemy for paranoia {CurrentParanoia}");
+            Debug.LogError($"No enemy for paranoia {PendingParanoia}");
             return;
         }
 
-        _currentEnemy.correctMask = success;
-        _currentEnemy.Activate();
+        _currentEnemy.Activate(maskCorrect);
     }
 
-    private EnemyBase GetEnemyByParanoia(Paranoia paranoia) {
+    private EnemyBase FindEnemyForParanoia(Paranoia paranoia) {
         foreach(EnemyBase enemy in enemies) {
-            if(enemy.TypeEnemy == paranoia)
+            if(enemy.EnemyType == paranoia)
                 return enemy;
         }
 
         return null;
     }
 
-    private void OnEnemyFinished(EnemyBase enemy) {
+    private void OnEnemyResolved(EnemyBase enemy, EnemyResult result) {
         _currentEnemy = null;
+
+        if(result == EnemyResult.Success)
+            onEnemyPassed?.Invoke();
+        else
+            onEnemyAttacked?.Invoke();
     }
+}
+
+public enum EnemyResult {
+    Success, // pasó de frente
+    Failed // atacó
 }

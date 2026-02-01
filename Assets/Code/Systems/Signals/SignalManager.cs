@@ -30,7 +30,7 @@ public class SignalManager : MonoBehaviour
             case 2: Paranoia = Paranoia.Tecnologia; break;
         }
 
-        enemyManager.CurrentParanoia = Paranoia;
+        enemyManager.PendingParanoia = Paranoia;
         DisplayParanoia(Paranoia);
     }
     

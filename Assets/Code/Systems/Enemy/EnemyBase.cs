@@ -2,24 +2,23 @@ using System;
 using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour {
-    [SerializeField] private Paranoia typeEnemy;
-    public Paranoia TypeEnemy => typeEnemy;
-    
-    public bool correctMask = false;
+    [SerializeField] private Paranoia enemyType;
+    public Paranoia EnemyType => enemyType;
 
-    public event Action<EnemyBase> OnEnemyFinished;
+    protected bool isMaskCorrect;
 
-    public void Activate() {
+    public event Action<EnemyBase, EnemyResult> OnEnemyResolved;
+
+    public void Activate(bool maskCorrect) {
+        isMaskCorrect = maskCorrect;
         gameObject.SetActive(true);
         OnAppear();
     }
 
-    protected void Finish() {
+    protected void Finish(EnemyResult result) {
         gameObject.SetActive(false);
-        OnEnemyFinished?.Invoke(this);
+        OnEnemyResolved?.Invoke(this, result);
     }
 
     protected abstract void OnAppear();
-    protected abstract void OnMaskSuccess();
-    protected abstract void OnMaskFailed();
 }
