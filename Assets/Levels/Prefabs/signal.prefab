@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _signal: {fileID: 11400000, guid: 049c2b9e926ada24ab8a855fb7b997e5, type: 2}
+  _duration: 1
   _onVisualTask:
     m_PersistentCalls:
       m_Calls:

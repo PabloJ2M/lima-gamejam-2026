@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.908
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 7.331
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.31264067
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.9498715
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalRotation.z
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 216.437
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80aab510881166b49857402cd0505906, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _signal: {fileID: 11400000, guid: ccf582fec8ba1fc468cfbdcfb17d61ed, type: 2}
+  _duration: 2
   _onVisualTask:
     m_PersistentCalls:
       m_Calls: []

@@ -4,8 +4,14 @@ using UnityEngine.Events;
 public class SignalListener : MonoBehaviour
 {
     [SerializeField] private Signal _signal;
-    [SerializeField] private UnityEvent _onVisualTask, _onAudioTask;
+    [SerializeField] private float _duration;
+    [SerializeField] private UnityEvent<bool> _onVisualTask, _onAudioTask;
 
+    private void Awake()
+    {
+        _onVisualTask.Invoke(false);
+        _onAudioTask.Invoke(false);
+    }
     private void OnEnable() => SignalManager.onSignalEmitted += SignalEmitted;
     private void OnDisable() => SignalManager.onSignalEmitted -= SignalEmitted;
 
@@ -15,20 +21,26 @@ public class SignalListener : MonoBehaviour
 
         if (isReal) ExcecuteAll();
         else ExecuteRandom();
+        Invoke(nameof(Disable), _duration);
     }
 
     private void ExcecuteAll()
     {
         print($"real signal emitted in {name}");
 
-        _onVisualTask.Invoke();
-        _onAudioTask.Invoke();
+        _onVisualTask.Invoke(true);
+        _onAudioTask.Invoke(true);
     }
     private void ExecuteRandom()
     {
         print($"fake signal emitted in {name}");
 
-        if (Random.value > 0.5f) _onVisualTask.Invoke();
-        else _onAudioTask.Invoke();
+        if (Random.value > 0.5f) _onVisualTask.Invoke(true);
+        else _onAudioTask.Invoke(true);
+    }
+    private void Disable()
+    {
+        _onVisualTask.Invoke(false);
+        _onAudioTask.Invoke(false);
     }
 }
