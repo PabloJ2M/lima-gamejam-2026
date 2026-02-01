@@ -34,9 +34,10 @@ public class MaskSelector : MonoBehaviour
 
     private void PerformeScroll(InputAction.CallbackContext ctx)
     {
-        if (ctx.ReadValue<float>() > 0)
+        if (_press.action.IsPressed()) return;
+        if (ctx.ReadValue<Vector2>().y > 0)
             _index++;
-        else if (ctx.ReadValue<float>() < 0)
+        else if (ctx.ReadValue<Vector2>().y < 0)
             _index--;
 
         if (_index < 0) _index = _masks.Length - 1;

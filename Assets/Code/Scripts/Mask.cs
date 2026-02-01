@@ -5,7 +5,7 @@ public class Mask : MonoBehaviour
     [SerializeField] private float _recoveryTime;
     [SerializeField] private Texture _texture;
     [SerializeField] private Sprite _sprite; 
-    [SerializeField] private GameObject _container;
+    //[SerializeField] private GameObject _container;
 
     public Texture Texture => _texture;
     public Sprite Sprite => _sprite;
@@ -20,12 +20,12 @@ public class Mask : MonoBehaviour
     public bool SelectMask()
     {
         if (_recovery > 0) return false;
-        _container.SetActive(true);
+        //_container.SetActive(true);
         return true;
     }
     public void DeselectMask()
     {
-        _container.SetActive(false);
+        //_container.SetActive(false);
         _recovery = _recoveryTime;
     }
 }

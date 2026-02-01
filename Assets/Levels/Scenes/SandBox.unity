@@ -592,8 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recoveryTime: 4
   _texture: {fileID: 2800000, guid: d08c8ec50f437ae4b9b4eea72a1b5dec, type: 3}
-  _sprite: {fileID: 0}
-  _container: {fileID: 2036922821}
+  _sprite: {fileID: 21300000, guid: 7d19b810fd3ceed4bbada98df193b381, type: 3}
 --- !u!1 &120687037
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff74ca2f7108d974598a1b7ec1c585ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reference: {fileID: 6078732967078939970, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _scroll: {fileID: 6240969308177333660, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _press: {fileID: 3001919216989983466, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _anim: {fileID: 2091122645}
   _indicator: {fileID: 1131969087}
   _mat: {fileID: 2100000, guid: 45c3155d414854942854e1537746886e, type: 2}
@@ -10242,8 +10242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recoveryTime: 4
   _texture: {fileID: 2800000, guid: 1b04493e73f0e2a488e9f678f038b632, type: 3}
-  _sprite: {fileID: 0}
-  _container: {fileID: 839682634}
+  _sprite: {fileID: 21300000, guid: a8a2ae27165a10d43b44d7cab5be400e, type: 3}
 --- !u!1 &1764920305
 GameObject:
   m_ObjectHideFlags: 0
@@ -15947,8 +15946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recoveryTime: 4
   _texture: {fileID: 2800000, guid: d28048230a08dd94e92100f5e5878edd, type: 3}
-  _sprite: {fileID: 0}
-  _container: {fileID: 863223846}
+  _sprite: {fileID: 21300000, guid: fc1f02385935f4f4db3aaf46452b2eec, type: 3}
 --- !u!1 &2112241227
 GameObject:
   m_ObjectHideFlags: 0
