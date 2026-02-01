@@ -29,7 +29,7 @@ public class SignalListener : MonoBehaviour
         _onVisualTask.Invoke(true);
         _onAudioTask.Invoke(true);
 
-        print($"real signal emitted in <color=green>{name}</color>");
+        print($"real signal emitted in <color=green>{name}</color> BothTasks");
     }
 
     private void ExecuteRandom() {
