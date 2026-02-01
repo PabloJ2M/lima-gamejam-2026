@@ -6058,7 +6058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0a556134fdc764b9de67f8d5378ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundName: ObjectCue
+  soundName: Fluorescent2
 --- !u!114 &1324966314
 MonoBehaviour:
   m_ObjectHideFlags: 0
