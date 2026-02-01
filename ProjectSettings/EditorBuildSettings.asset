@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: Assets/Levels/Scenes/SandBox.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8c86b6d3b8ee10740b9f769ded35e893, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 584996587355c604db7437cdc033c97d, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 254a05f851c6dd949946c1ae35d874b0, type: 2}
