@@ -12,14 +12,10 @@ public class SignalManager : MonoBehaviour
     [SerializeField] private int _rounds = 3;
     [SerializeField] private int _signalsPerRound = 3, _repeatRound = 2;
 
-    private int _currentRound;
-
     [SerializeField] private float _signalDelay;
     [SerializeField] private UnityEvent _onCompleteSequence;
 
     public static event Action<Signal, bool> onSignalEmitted;
-
-    private void Start() => DisplayRandomParanoia();
 
     public void DisplayRandomParanoia()
     {
@@ -38,7 +34,8 @@ public class SignalManager : MonoBehaviour
 
         var allSignals = _collection.GetSignals();
         var possibleTrueSignals = _collection.GetSignalsByType(paranoia).ToList();
-        possibleTrueSignals.Shuffle();
+
+        possibleTrueSignals.InterleaveShuffle();
 
         for (int i = 0; i < _rounds; i++)
         {

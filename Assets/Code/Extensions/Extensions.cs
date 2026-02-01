@@ -11,4 +11,20 @@ public static class Extensions
             (list[i], list[rnd]) = (list[rnd], list[i]);
         }
     }
+
+    public static void InterleaveShuffle<T>(this List<T> list)
+    {
+        var temp = new List<T>(list.Count);
+        int mid = (list.Count + 1) / 2;
+
+        for (int i = 0; i < mid; i++)
+        {
+            temp.Add(list[i]);
+            if (i + mid < list.Count)
+                temp.Add(list[i + mid]);
+        }
+
+        list.Clear();
+        list.AddRange(temp);
+    }
 }
