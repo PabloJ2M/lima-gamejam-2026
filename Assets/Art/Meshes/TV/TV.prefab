@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5858771876565707872
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2296274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5087147
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.344387
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      propertyPath: m_Name
+      value: TV
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 795505539659459943}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5921377879681041962}
+  m_SourcePrefab: {fileID: 100100000, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+--- !u!1 &6741853642194833713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9f4daa38761d7e54c9ba7ae61cdcc9c9, type: 3}
+  m_PrefabInstance: {fileID: 5858771876565707872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &795505539659459943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741853642194833713}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3921616, y: 1.3921616, z: 1.3204076}
+  m_Center: {x: -0.000000029802322, y: -0.056533456, z: -0.15456533}
+--- !u!114 &5921377879681041962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741853642194833713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a9172ef270c8a4888f78c54318c9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _signal: {fileID: 11400000, guid: af37a76c8c4a675498874ccdac449904, type: 2}
+  _onVisualTask:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAudioTask:
+    m_PersistentCalls:
+      m_Calls: []
