@@ -15,16 +15,19 @@ public class SignalManager : MonoBehaviour
     [SerializeField] private float _signalDelay;
     [SerializeField] private UnityEvent _onCompleteSequence;
 
+    public Paranoia Paranoia { get; private set; }
     public static event Action<Signal, bool> onSignalEmitted;
 
     public void DisplayRandomParanoia()
     {
         switch (Random.Range(0, 3))
         {
-            case 0: DisplayParanoia(Paranoia.Exito); break;
-            case 1: DisplayParanoia(Paranoia.Observado); break;
-            case 2: DisplayParanoia(Paranoia.Tecnologia); break;
+            case 0: Paranoia = Paranoia.Exito; break;
+            case 1: Paranoia = Paranoia.Observado; break;
+            case 2: Paranoia = Paranoia.Tecnologia; break;
         }
+
+        DisplayParanoia(Paranoia);
     }
     public void DisplayParanoia(Paranoia paranoia)
     {
