@@ -18,7 +18,7 @@ public class TutorialController : MonoBehaviour
 
     IEnumerator InitSequence()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(9f);
         onEvent1?.Invoke();
         camInit.SetActive(false);
         camTutorial.SetActive(true);
