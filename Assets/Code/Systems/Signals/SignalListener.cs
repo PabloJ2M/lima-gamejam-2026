@@ -6,6 +6,7 @@ public class SignalListener : MonoBehaviour
     [SerializeField] private Signal _signal;
     [SerializeField] private float _duration;
     [SerializeField] private UnityEvent<bool> _onVisualTask, _onAudioTask;
+    //[SerializeField] private 
 
     private void Awake()
     {
