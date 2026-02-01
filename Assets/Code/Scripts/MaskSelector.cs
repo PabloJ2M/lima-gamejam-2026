@@ -24,6 +24,7 @@ public class MaskSelector : MonoBehaviour
         if (isPressed) {
             if (!_masks[index].SelectMask()) return;
             _anim.SetBool("Use", true);
+            SoundManager.Instance.PlaySound("PutMaskOn");
         }
         else TakeOff();
 
@@ -35,5 +36,6 @@ public class MaskSelector : MonoBehaviour
         if (Selected < 0) return;
         _masks[Selected].DeselectMask();
         _anim.SetBool("Use", false);
+        SoundManager.Instance.PlaySound("TakeMaskOff");
     }
 }

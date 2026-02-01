@@ -53,7 +53,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5600
 --- !u!114 &-6684382962777175521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5500
 --- !u!114 &-4830080519570907799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639055535102594910
+  lastModified: 639055583540397708
   FileSizes:
   - Name: Desktop
     Value: 591488
@@ -289,7 +289,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 2000
+  Length: 5000
 --- !u!114 &-2515981527617844766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 2000
+  Length: 4843
 --- !u!114 &-1636180192632215931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5000
 --- !u!114 &-931318019280480074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5066
 --- !u!114 &-413601856357409307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1145890156175936500}
   cacheVersion: 131858
-  cacheTime: 639055535102620102
+  cacheTime: 639055583547150836
   SerializableEventsDict:
   - key: event:/Ambience/Global
     index: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 4000
+  Length: 5293
 --- !u!114 &366079956822840677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055535102559893
+  lastModified: 639055583535061535
   FileSizes:
   - Name: Desktop
     Value: 2304
@@ -672,7 +672,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5343
 --- !u!114 &1888903805172794687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 4000
+  Length: 5098
 --- !u!114 &2886000560854613611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5060
 --- !u!114 &3952420312979259863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 2000
+  Length: 5280
 --- !u!114 &4631885472568381559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639055535102539863
+  lastModified: 639055583534797669
   FileSizes:
   - Name: Desktop
     Value: 241920
@@ -908,7 +908,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5500
 --- !u!114 &5842538175484244279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,7 +962,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5282
 --- !u!114 &6967323997570523186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639055535102549890
+  lastModified: 639055583535047281
   FileSizes:
   - Name: Desktop
     Value: 1524
@@ -998,10 +998,10 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639055535102620102
+  lastModified: 639055583547150836
   FileSizes:
   - Name: Desktop
-    Value: 952352
+    Value: 1340224
   Exists: 1
 --- !u!114 &8468409731891964144
 MonoBehaviour:
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 3000
+  Length: 5295
 --- !u!114 &8530648533621793282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,4 +1056,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 20
-  Length: 4000
+  Length: 5898
