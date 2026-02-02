@@ -22,7 +22,7 @@ namespace UnityEngine.Animations
             _to += new float3(direction.x * size.x, direction.y * size.y, 0f);
         }
 
-        protected virtual void OnEnable() => _transform.localPosition = _tweenCore.IsEnabled ? _from : _to;
+        protected virtual void OnEnable() => _transform.localPosition = !_tweenCore.IsEnabled ? _from : _to;
 
         protected override void OnPlay(bool value)
         {

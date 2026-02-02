@@ -4,24 +4,17 @@ using UnityEngine.Events;
 
 public class TutorialController : MonoBehaviour
 {
-    public GameObject camInit, camTutorial;
-    public float time_to_off_lights;
+    [SerializeField] private float _timeToSkipTutorial;
+    [SerializeField] private float time_to_off_lights;
 
     public UnityEvent onEvent1;
     public UnityEvent onEvent2;
 
-    void Start()
+    private void Start() => StartCoroutine(InitSequence());
+    private IEnumerator InitSequence()
     {
-        camTutorial.SetActive(false);
-        StartCoroutine(InitSequence());
-    }
-
-    IEnumerator InitSequence()
-    {
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(_timeToSkipTutorial);
         onEvent1?.Invoke();
-        camInit.SetActive(false);
-        camTutorial.SetActive(true);
         yield return new WaitForSeconds(time_to_off_lights);
         onEvent2?.Invoke();
     }

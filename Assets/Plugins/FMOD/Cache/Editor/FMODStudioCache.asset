@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639055537341111239
+  lastModified: 639056342594236018
   FileSizes:
   - Name: Desktop
     Value: 591488
@@ -508,7 +508,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1145890156175936500}
   cacheVersion: 131858
-  cacheTime: 639055586862451176
+  cacheTime: 639056342594295549
   SerializableEventsDict:
   - key: event:/Ambience/Global
     index: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055537341025508
+  lastModified: 639056342594185839
   FileSizes:
   - Name: Desktop
     Value: 2304
@@ -877,7 +877,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639055537340975204
+  lastModified: 639056342594166200
   FileSizes:
   - Name: Desktop
     Value: 241920
@@ -978,7 +978,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639055537340995348
+  lastModified: 639056342594176182
   FileSizes:
   - Name: Desktop
     Value: 1524
@@ -998,7 +998,7 @@ MonoBehaviour:
   Path: Assets/FMOD/gamejam2026/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639055586862451176
+  lastModified: 639056342594295549
   FileSizes:
   - Name: Desktop
     Value: 1340224

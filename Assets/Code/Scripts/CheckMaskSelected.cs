@@ -8,16 +8,17 @@ public class CheckMaskSelected : MonoBehaviour
 
     [SerializeField] private UnityEvent _onSuccess, _onMissed;
 
-    public void CompareMask() {
+    public void CompareMask()
+    {
         Paranoia paranoia = (_selector.Selected) switch {
-            0 => Paranoia.Exito, 1 => Paranoia.Observado, 2 => Paranoia.Tecnologia, _ => Paranoia.None
+            0 => Paranoia.Observado, 1 => Paranoia.Tecnologia, 2 => Paranoia.Exito, _ => Paranoia.None
         };
 
         if(_signals.Paranoia == paranoia) {
-            Debug.Log("Correct Mask Selected");
+            print("<color=green>Correct Mask Selected</color>");
             _onSuccess.Invoke();
         } else {
-            Debug.Log("Missed Mask Selected");
+            print("<color=red>Missed Mask Selected</color>");
             _onMissed.Invoke();
         }
     }

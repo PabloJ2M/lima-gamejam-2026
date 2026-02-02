@@ -21,7 +21,8 @@ public class SignalManager : MonoBehaviour
     
     [SerializeField] private EnemyManager enemyManager;
 
-    public void DisplayRandomParanoia() {
+    public void DisplayRandomParanoia()
+    {
         _onStart.Invoke();
 
         switch(Random.Range(0, 3)) {
@@ -30,7 +31,7 @@ public class SignalManager : MonoBehaviour
             case 2: Paranoia = Paranoia.Tecnologia; break;
         }
 
-        enemyManager.PendingParanoia = Paranoia;
+        //enemyManager.PendingParanoia = Paranoia;
         DisplayParanoia(Paranoia);
     }
     
@@ -47,7 +48,6 @@ public class SignalManager : MonoBehaviour
 
         var allSignals = _collection.GetSignals();
         var possibleTrueSignals = _collection.GetSignalsByType(paranoia).ToList();
-        print(string.Join(",", possibleTrueSignals));
 
         possibleTrueSignals.InterleaveShuffle();
 
