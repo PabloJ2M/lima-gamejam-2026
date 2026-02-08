@@ -47,6 +47,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -120,5 +121,13 @@ InitTestScene*.unity*
 # Log files can be ignored.
 fmod_editor.log
 
+# FMOD Unity Generated (SAFE TO IGNORE)
+Assets/Plugins/FMOD/Cache/
+
+# FMOD Metadata that constantly changes
+**/FMODStudioCache.asset
+**/FMODStudioCache.asset.meta
+
 # Vscode folder
 .vscode/
+.vsconfig

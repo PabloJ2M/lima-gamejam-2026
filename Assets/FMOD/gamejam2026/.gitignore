@@ -1,0 +1,10 @@
+# FMOD generated
+Build/
+Metadata/
+.cache/
+
+# User & temp
+*.log
+*.tmp
+*.bak
+*.autosave
