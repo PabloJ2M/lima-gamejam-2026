@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectEmitter : MonoBehaviour
 {
-    [SerializeField] private string soundName;
+    [SerializeField] private EventReference soundReference;
     private StudioEventEmitter emitter;
 
     private void Awake()
@@ -13,7 +13,7 @@ public class ObjectEmitter : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.Instance.InitializeEventEmitter(soundName, emitter);
+        SoundManager.Instance.InitializeEventEmitter(soundReference, emitter);
         emitter.Play();
     }
 }

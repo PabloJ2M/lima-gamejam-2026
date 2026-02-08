@@ -1,3 +1,5 @@
+using System;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.UI;
 using Gameplay.Interaction;
@@ -12,6 +14,11 @@ public class MaskSelector : MonoBehaviour
     [SerializeField] private Transform _targetIK;
     [SerializeField] private Material _mat;
 
+    [Header("Sounds")]
+    [SerializeField] private EventReference putMaskOn;
+    [SerializeField] private EventReference takeMaskOff;
+
+    private int _index;
     public SelectableMask Selected { get; private set; }
 
     private void OnEnable()
@@ -32,6 +39,15 @@ public class MaskSelector : MonoBehaviour
 
         _targetIK.position = mask.transform.position;
 
+        if (isPressed) {
+            if (!_masks[index].SelectMask()) return;
+            _anim.SetBool("Use", true);
+            _mat.SetTexture("_MainTex", _masks[index].Texture);
+            SoundManager.Instance.PlaySound(putMaskOn);
+        }
+        else TakeOff();
+
+        Selected = index;
         _character.SetBool("Use", true);
         _maskGroup.SetBool("IsDisplayed", false);
         _mat.SetTexture("_MainTex", mask.Texture);
@@ -44,6 +60,6 @@ public class MaskSelector : MonoBehaviour
 
         Selected = null;
         _character.SetBool("Use", false);
-        SoundManager.Instance.PlaySound("TakeMaskOff");
+        SoundManager.Instance.PlaySound(takeMaskOff);
     }
 }

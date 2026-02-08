@@ -1,12 +1,5 @@
-public struct SoundInstance
+public class SoundInstance
 {
-    public enum STATUS
-    {
-        OK,
-        ERROR,
-    }
-
-    public STATUS status;
     public SerializableGuid Id;
     public string Name;
 }

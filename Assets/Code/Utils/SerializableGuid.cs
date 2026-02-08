@@ -30,6 +30,8 @@ public sealed class SerializableGuid : IComparable,
         return false;
     }
 
+    public bool IsEmpty() => guid == Guid.Empty;
+
     public int CompareTo(SerializableGuid other) => guid.CompareTo(other.guid);
     public int CompareTo(Guid other) => guid.CompareTo(other);
     public int CompareTo(object obj) {

@@ -1,22 +1,15 @@
+using FMODUnity;
 using UnityEngine;
 
 public class PlayerSounds : MonoBehaviour
 {
     [Header("Sound Names")]
-    [SerializeField] private string breath;
+    [SerializeField] private EventReference breath;
     private SerializableGuid breathId;
 
-    private void Start()
-    {
-        PlayBreathLoop();
-    }
-
-    private void PlayBreathLoop()
+    public void PlayBreathLoop()
     {
         SoundInstance breathInstance = SoundManager.Instance.PlaySound(breath);
-        if(breathInstance.status == SoundInstance.STATUS.OK)
-        {
-            breathId = breathInstance.Id;
-        }
+        breathId = breathInstance.Id;
     }
 }
