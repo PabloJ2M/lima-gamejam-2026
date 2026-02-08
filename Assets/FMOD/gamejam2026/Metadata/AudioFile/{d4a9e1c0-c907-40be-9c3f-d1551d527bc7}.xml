@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d4a9e1c0-c907-40be-9c3f-d1551d527bc7}">
+		<property name="assetPath">
+			<value>Props/6. Fluorescentes/Fluorescente 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.2828125000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{92f023e3-9311-4359-9174-003d1cfe14c3}</destination>
+		</relationship>
+	</object>
+</objects>

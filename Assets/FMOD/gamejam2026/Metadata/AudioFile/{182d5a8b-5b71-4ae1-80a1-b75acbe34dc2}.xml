@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{182d5a8b-5b71-4ae1-80a1-b75acbe34dc2}">
+		<property name="assetPath">
+			<value>Props/5. Ventanas/Ventana 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.8431249999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{92f023e3-9311-4359-9174-003d1cfe14c3}</destination>
+		</relationship>
+	</object>
+</objects>

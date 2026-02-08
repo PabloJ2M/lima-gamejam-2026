@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{3d250012-1c00-49f6-ad07-97d0afcf5a00}">
+		<property name="assetPath">
+			<value>Props/3. Ventiladores/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{92f023e3-9311-4359-9174-003d1cfe14c3}</destination>
+		</relationship>
+	</object>
+</objects>

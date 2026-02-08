@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{d5eecf09-f8b8-448b-9bd6-c3a729469fe0}">
+		<property name="assetPath">
+			<value>Props/4. Radios/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{92f023e3-9311-4359-9174-003d1cfe14c3}</destination>
+		</relationship>
+	</object>
+</objects>

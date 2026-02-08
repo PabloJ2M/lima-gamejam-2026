@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e07a928b-58c0-460f-8585-02224aef7c74}">
+		<property name="assetPath">
+			<value>Props/1. Pizarras/Pizarra 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.8985000000000003</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{92f023e3-9311-4359-9174-003d1cfe14c3}</destination>
+		</relationship>
+	</object>
+</objects>
