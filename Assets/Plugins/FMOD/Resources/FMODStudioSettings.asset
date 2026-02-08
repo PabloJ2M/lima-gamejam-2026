@@ -509,15 +509,15 @@ MonoBehaviour:
   displaySortOrder: 0
   childIdentifiers:
   - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - e7a046c753c3c3d4aacc91f6597f310d
   - c88d16e5272a4e241b0ef0ac2e53b73d
   - 2c5177b11d81d824dbb064f9ac8527da
-  - e7a046c753c3c3d4aacc91f6597f310d
   - fd7c55dab0fce234b8c25f6ffca523c1
-  - 52eb9df5db46521439908db3a29a1bbb
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 46fbfdf3fc43db0458918377fd40293e
   - de700ef3f37a49b58a57ae3addf01ad9
+  - 52eb9df5db46521439908db3a29a1bbb
   - b7716510a1f36934c87976f3a81dbf3d
+  - 46fbfdf3fc43db0458918377fd40293e
   codecChannels:
     Value: []
     HasValue: 0
@@ -534,10 +534,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 1
+  HasSourceProject: 0
   HasPlatforms: 1
   sourceProjectPath: Assets/FMOD/gamejam2026/gamejam2026.fspro
-  sourceBankPath: Assets/FMOD/gamejam2026/Build
+  sourceBankPath: Assets/FMOD/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -559,12 +559,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master
-  Banks:
-  - Ambience
-  - Music
-  - SFX
+  MasterBanks: []
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -580,18 +576,18 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131858
   Platforms:
-  - {fileID: -3439359186714371112}
-  - {fileID: -2527784229846041580}
   - {fileID: -7639406769879334629}
+  - {fileID: -7191722146763146989}
+  - {fileID: -5346909970821616962}
   - {fileID: -4647673405477731090}
   - {fileID: -3920335008568709629}
-  - {fileID: -5346909970821616962}
+  - {fileID: -3439359186714371112}
+  - {fileID: -2527784229846041580}
   - {fileID: 3803626610451717010}
-  - {fileID: 4134719413134323492}
-  - {fileID: -7191722146763146989}
-  - {fileID: 7221033320159418336}
   - {fileID: 4086073600708133668}
+  - {fileID: 4134719413134323492}
   - {fileID: 4623353251780055034}
+  - {fileID: 7221033320159418336}
   MigratedPlatforms: 0a00000000000000150000000b00000009000000050000001200000008000000060000000c0000000200000001000000
 --- !u!114 &3803626610451717010
 MonoBehaviour:
