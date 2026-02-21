@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class SignalManager : MonoBehaviour
 {
     [SerializeField] private SignalCollection _collection;
+    [SerializeField] private EnemyManager _enemyManager;
     [SerializeField] private int _rounds = 3;
     [SerializeField] private int _signalsPerRound = 3, _repeatRound = 2;
 
@@ -18,8 +19,6 @@ public class SignalManager : MonoBehaviour
 
     public Paranoia Paranoia { get; private set; }
     public static event Action<Signal, bool> onSignalEmitted;
-    
-    [SerializeField] private EnemyManager enemyManager;
 
     public void DisplayRandomParanoia()
     {
@@ -31,7 +30,7 @@ public class SignalManager : MonoBehaviour
             case 2: Paranoia = Paranoia.Tecnologia; break;
         }
 
-        //enemyManager.PendingParanoia = Paranoia;
+        _enemyManager.PendingParanoia = Paranoia;
         DisplayParanoia(Paranoia);
     }
     

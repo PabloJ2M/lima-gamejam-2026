@@ -10,11 +10,9 @@ public class CheckMaskSelected : MonoBehaviour
 
     public void CompareMask()
     {
-        Paranoia paranoia = (_selector.Selected) switch {
-            0 => Paranoia.Observado, 1 => Paranoia.Tecnologia, 2 => Paranoia.Exito, _ => Paranoia.None
-        };
+        Paranoia selected = _selector.Selected ? _selector.Selected.Paranoia : Paranoia.None;
 
-        if(_signals.Paranoia == paranoia) {
+        if(_signals.Paranoia == selected) {
             print("<color=green>Correct Mask Selected</color>");
             _onSuccess.Invoke();
         } else {
