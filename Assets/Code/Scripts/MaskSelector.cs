@@ -7,10 +7,17 @@ public class MaskSelector : MonoBehaviour
     [SerializeField] private Image _preview;
     [SerializeField] private Timeout _timer;
 
+    [SerializeField] private Animator _maskGroup;
     [SerializeField] private Animator _character;
     [SerializeField] private Material _mat;
 
     public SelectableMask Selected { get; private set; }
+
+    private void OnEnable()
+    {
+        _maskGroup.ResetControllerState();
+        _maskGroup.SetBool("IsDisplayed", true);
+    }
 
     public void Preview(Sprite sprite)
     {
@@ -23,6 +30,7 @@ public class MaskSelector : MonoBehaviour
         SoundManager.Instance.PlaySound("PutMaskOn");
 
         _character.SetBool("Use", true);
+        _maskGroup.SetBool("IsDisplayed", false);
         _mat.SetTexture("_MainTex", mask.Texture);
         _timer.CompleteTimeout();
     }
