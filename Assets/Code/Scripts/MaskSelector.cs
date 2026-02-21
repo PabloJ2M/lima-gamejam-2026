@@ -1,19 +1,30 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Gameplay.Interaction;
 
 public class MaskSelector : MonoBehaviour
 {
-    [SerializeField] private Animator _anim;
+    [SerializeField] private Image _preview;
+    [SerializeField] private Timeout _timer;
+
+    [SerializeField] private Animator _character;
     [SerializeField] private Material _mat;
 
     public SelectableMask Selected { get; private set; }
 
+    public void Preview(Sprite sprite)
+    {
+        if (sprite)
+            _preview.sprite = sprite;
+    }
     public void Interact(SelectableMask mask)
     {
         Selected = mask;
-        _anim.SetBool("Use", true);
-        _mat.SetTexture("_MainTex", mask.Texture);
         SoundManager.Instance.PlaySound("PutMaskOn");
+
+        _character.SetBool("Use", true);
+        _mat.SetTexture("_MainTex", mask.Texture);
+        _timer.CompleteTimeout();
     }
 
     public void TakeOff()
@@ -21,7 +32,7 @@ public class MaskSelector : MonoBehaviour
         if (!Selected) return;
 
         Selected = null;
-        _anim.SetBool("Use", false);
+        _character.SetBool("Use", false);
         SoundManager.Instance.PlaySound("TakeMaskOff");
     }
 }

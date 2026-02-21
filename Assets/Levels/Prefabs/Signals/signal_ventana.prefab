@@ -41,6 +41,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ccf582fec8ba1fc468cfbdcfb17d61ed, type: 2}
     - target: {fileID: 5509805938104934615, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509805938104934615, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       propertyPath: _onVisualTask.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}

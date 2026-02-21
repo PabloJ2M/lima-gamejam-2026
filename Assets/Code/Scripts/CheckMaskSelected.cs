@@ -11,6 +11,7 @@ public class CheckMaskSelected : MonoBehaviour
     public void CompareMask()
     {
         Paranoia selected = _selector.Selected ? _selector.Selected.Paranoia : Paranoia.None;
+        print($"mask selected {selected}");
 
         if(_signals.Paranoia == selected) {
             print("<color=green>Correct Mask Selected</color>");
