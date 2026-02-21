@@ -12,8 +12,6 @@ namespace Gameplay.Interaction
         private Selectable _currentSelected;
 
         private void Start() => _triggerAction.action.performed += Interact;
-        private void OnEnable() => _triggerAction.action.Enable();
-        private void OnDisable() => _triggerAction.action.Disable();
 
         private void Update()
         {

@@ -9,6 +9,7 @@ public class MaskSelector : MonoBehaviour
 
     [SerializeField] private Animator _maskGroup;
     [SerializeField] private Animator _character;
+    [SerializeField] private Transform _targetIK;
     [SerializeField] private Material _mat;
 
     public SelectableMask Selected { get; private set; }
@@ -28,6 +29,8 @@ public class MaskSelector : MonoBehaviour
     {
         Selected = mask;
         SoundManager.Instance.PlaySound("PutMaskOn");
+
+        _targetIK.position = mask.transform.position;
 
         _character.SetBool("Use", true);
         _maskGroup.SetBool("IsDisplayed", false);

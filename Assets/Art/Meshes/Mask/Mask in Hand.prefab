@@ -62,45 +62,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7c83573b13e5e6d479f58909c40c157a, type: 3}
       propertyPath: m_Name
-      value: Mask
+      value: Mask in Hand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c83573b13e5e6d479f58909c40c157a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6194365874539718895}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c83573b13e5e6d479f58909c40c157a, type: 3}
---- !u!1 &8959769309810032817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c83573b13e5e6d479f58909c40c157a, type: 3}
-  m_PrefabInstance: {fileID: 8112697507766713824}
-  m_PrefabAsset: {fileID: 0}
---- !u!1773428102 &6194365874539718895
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959769309810032817}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0.4419806, y: 0.77889335, z: -0.069477886}
-  m_RotationAtRest: {x: -20.318928, y: -173.872, z: -83.47529}
-  m_TranslationOffsets:
-  - {x: 0.08400723, y: 0.13474621, z: 0.4157396}
-  m_RotationOffsets:
-  - {x: 55.58393, y: -148.99606, z: -79.99557}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_Active: 1
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1

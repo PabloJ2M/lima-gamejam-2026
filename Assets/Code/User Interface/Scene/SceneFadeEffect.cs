@@ -19,13 +19,13 @@ namespace Unity.SceneManagement
         private void Start()
         {
             bool isLoadingScene = !string.IsNullOrEmpty(ScenePath);
-            _canvasGroup.alpha = isLoadingScene ? 0f : 1f;
+            _canvasGroup.alpha = isLoadingScene ? 0.001f : 0.999f;
             _fadeDirection = (sbyte)(isLoadingScene ? 1 : -1);
         }
         private void Update()
         {
             if (_isComplete) return;
-            _canvasGroup.alpha += Time.deltaTime * _speed * _fadeDirection;
+            _canvasGroup.alpha += Time.unscaledDeltaTime * _speed * _fadeDirection;
 
             switch(_canvasGroup.alpha)
             {
