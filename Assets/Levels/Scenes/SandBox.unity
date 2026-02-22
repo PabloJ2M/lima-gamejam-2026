@@ -486,6 +486,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2042241459}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2042241461}
+        m_TargetAssemblyTypeName: EnvironmentSounds, Assembly-CSharp
+        m_MethodName: SetGlobalAmbience
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2042241460}
+        m_TargetAssemblyTypeName: PlayerSounds, Assembly-CSharp
+        m_MethodName: PlayBreathLoop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEvent2:
     m_PersistentCalls:
       m_Calls:
@@ -2729,6 +2765,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2042241461}
+        m_TargetAssemblyTypeName: EnvironmentSounds, Assembly-CSharp
+        m_MethodName: SetEndGameMusic
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9851,6 +9899,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 405204548}
   rotationSpeed: 6
+  chairSounds:
+  - Guid:
+      Data1: 639142888
+      Data2: 1249130653
+      Data3: 1425253771
+      Data4: -1579603701
+    Path: event:/SFX/Player/ChairSqueak1
+  - Guid:
+      Data1: 2144157957
+      Data2: 1324730221
+      Data3: 1256180877
+      Data4: 1462371647
+    Path: event:/SFX/Player/ChairSqueak2
+  - Guid:
+      Data1: 1696209307
+      Data2: 1134760454
+      Data3: 1098097809
+      Data4: 1021533344
+    Path: event:/SFX/Player/ChairSqueak3
+  soundStopThreshold: 0.5
+  soundStartThreshold: 5
 --- !u!114 &1360984825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11587,6 +11656,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2042241459}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEnemyAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -11606,6 +11687,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2042241461}
+        m_TargetAssemblyTypeName: EnvironmentSounds, Assembly-CSharp
+        m_MethodName: SetGameOverMusic
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16990,6 +17083,20 @@ MonoBehaviour:
   _character: {fileID: 2091122649}
   _targetIK: {fileID: 2091122645}
   _mat: {fileID: 2100000, guid: 45c3155d414854942854e1537746886e, type: 2}
+  putMaskOn:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  takeMaskOff:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &2029888455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17067,6 +17174,7 @@ GameObject:
   - component: {fileID: 2042241458}
   - component: {fileID: 2042241459}
   - component: {fileID: 2042241460}
+  - component: {fileID: 2042241461}
   m_Layer: 0
   m_Name: sound
   m_TagString: Untagged
@@ -17105,8 +17213,20 @@ MonoBehaviour:
   defaultAmbienceVolume: 1
   defaultMusicVolume: 1
   defaultSFXVolume: 1
-  defaultAmbience: Global
-  defaultMusic: 
+  defaultAmbience:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  defaultMusic:
+    Guid:
+      Data1: 164403088
+      Data2: 1080668018
+      Data3: 1277686449
+      Data4: -2089537947
+    Path: event:/Music/LoadingScreen
 --- !u!114 &2042241460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17119,7 +17239,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555729f7576193443b7142e145154ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breath: Breath
+  breath:
+    Guid:
+      Data1: -353732796
+      Data2: 1230839744
+      Data3: 691508620
+      Data4: 1881845015
+    Path: event:/SFX/Player/BreathLOOP
+--- !u!114 &2042241461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042241457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53857a1a3c2b1964a9e84d301889b059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnvironmentSounds
+  globalAmbience:
+    Guid:
+      Data1: 2005025243
+      Data2: 1193934091
+      Data3: 423362742
+      Data4: 1226102156
+    Path: event:/Ambience/Global
+  endGameMusic:
+    Guid:
+      Data1: -1630706274
+      Data2: 1229185401
+      Data3: 1106019499
+      Data4: -1474870479
+    Path: event:/Music/EndGame
+  gameOverMusic:
+    Guid:
+      Data1: 1795324672
+      Data2: 1299322668
+      Data3: -320264829
+      Data4: -1797963310
+    Path: event:/Music/GameOver
+  winMusic:
+    Guid:
+      Data1: 968730023
+      Data2: 1208742534
+      Data3: 907995017
+      Data4: -2071904346
+    Path: event:/Music/Win
 --- !u!1 &2072838311
 GameObject:
   m_ObjectHideFlags: 0

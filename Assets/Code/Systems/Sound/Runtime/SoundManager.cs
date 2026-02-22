@@ -21,8 +21,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private float defaultSFXVolume = 1.0f;
 
     [Header("Default Sounds")]
-    [SerializeField] public string defaultAmbience;
-    [SerializeField] public string defaultMusic;
+    [SerializeField] public EventReference defaultAmbience;
+    [SerializeField] public EventReference defaultMusic;
 
     private Bus masterBus;
     private Bus ambienceBus;
@@ -68,6 +68,7 @@ public class SoundManager : MonoBehaviour
     }
 
     public void SetBusVolume(BUS busType, float volume)
+
     {
         volume = Mathf.Clamp01(volume);
         Bus bus = busType switch
@@ -81,25 +82,14 @@ public class SoundManager : MonoBehaviour
         bus.setVolume(volume);
     }
 
-    private bool TryCreateInstance(string name, out EventInstance eventInstance)
+    private EventInstance CreateInstance(EventReference reference)
     {
-        if(!SoundLoader.TryGetEvent(name, out EventReference reference))
-        {
-            eventInstance = default;
-            return false;
-        }
-
-        eventInstance = RuntimeManager.CreateInstance(reference);
-        return true;
+        if(reference.IsNull) return default;
+        return RuntimeManager.CreateInstance(reference);
     }
 
-    public StudioEventEmitter InitializeEventEmitter(string name, StudioEventEmitter emitter)
+    public StudioEventEmitter InitializeEventEmitter(EventReference reference, StudioEventEmitter emitter)
     {
-        if (!SoundLoader.TryGetEvent(name, out EventReference reference))
-        {
-            return null;
-        }
-
         emitter.EventReference = reference;
         if(!eventEmitters.Contains(emitter)) eventEmitters.Add(emitter);
 
@@ -107,15 +97,12 @@ public class SoundManager : MonoBehaviour
         return emitter;
     }
 
-    public SoundInstance PlaySound(string name)
+    public SoundInstance PlaySound(EventReference reference)
     {
-        if(!TryCreateInstance(name, out EventInstance instance))
-        {
-            return new SoundInstance
-            {
-                status = SoundInstance.STATUS.ERROR
-            };
-        }
+        EventInstance instance = CreateInstance(reference);
+
+        if(!instance.isValid()) return null;
+
         SerializableGuid guid = new SerializableGuid(Guid.NewGuid());
 
         eventInstances.Add(guid, instance);
@@ -125,13 +112,12 @@ public class SoundManager : MonoBehaviour
         {
             Name = name,
             Id = guid,
-            status = SoundInstance.STATUS.OK,
         };
     }
 
     public void StopSound(SerializableGuid id)
     {
-        if(!eventInstances.TryGetValue(id, out EventInstance instance))
+        if(id.IsEmpty() || !eventInstances.TryGetValue(id, out EventInstance instance))
         {
             return;
         }
@@ -151,15 +137,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void SetAmbience(string name)
+    public void SetAmbience(EventReference reference)
     {
         StopAmbience();
 
-        SoundInstance instance = PlaySound(name);
-        if(instance.status == SoundInstance.STATUS.ERROR)
-        {
-            return;
-        }
+        SoundInstance instance = PlaySound(reference);
+
+        if(instance == null) return;
 
         setAmbience = true;
         ambienceId = instance.Id;
@@ -175,15 +159,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void SetMusic(string name)
+    public void SetMusic(EventReference reference)
     {
         StopMusic();
 
-        SoundInstance instance = PlaySound(name);
-        if (instance.status == SoundInstance.STATUS.ERROR)
-        {
-            return;
-        }
+        SoundInstance instance = PlaySound(reference);
+
+        if(instance == null) return;
 
         setMusic = true;
         musicId = instance.Id;
