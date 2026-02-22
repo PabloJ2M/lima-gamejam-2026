@@ -35,19 +35,10 @@ public class MaskSelector : MonoBehaviour
     public void Interact(SelectableMask mask)
     {
         Selected = mask;
-        SoundManager.Instance.PlaySound("PutMaskOn");
+        SoundManager.Instance.PlaySound(putMaskOn);
 
         _targetIK.position = mask.transform.position;
 
-        if (isPressed) {
-            if (!_masks[index].SelectMask()) return;
-            _anim.SetBool("Use", true);
-            _mat.SetTexture("_MainTex", _masks[index].Texture);
-            SoundManager.Instance.PlaySound(putMaskOn);
-        }
-        else TakeOff();
-
-        Selected = index;
         _character.SetBool("Use", true);
         _maskGroup.SetBool("IsDisplayed", false);
         _mat.SetTexture("_MainTex", mask.Texture);
