@@ -18,13 +18,7 @@ public class RotatePlayer : MonoBehaviour
     [SerializeField] private float soundStartThreshold = 5f;
     private int direction;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Direcci�n de la c�mara (PLANA)
         Vector3 camForward = cameraTransform.forward;
@@ -39,11 +33,12 @@ public class RotatePlayer : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(camForward);
             diff = Quaternion.Angle(transform.rotation, targetRotation);
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                targetRotation,
-                rotationSpeed * Time.deltaTime
-            );
+            transform.rotation = targetRotation;
+            //transform.rotation = Quaternion.Slerp(
+            //    transform.rotation,
+            //    targetRotation,
+            //    rotationSpeed * Time.deltaTime
+            //);
         }
 
         if (diff < soundStopThreshold || Mathf.Sign(diff) != direction)

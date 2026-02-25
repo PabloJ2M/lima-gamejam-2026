@@ -39,7 +39,7 @@ public class MaskSelector : MonoBehaviour
 
         _targetIK.position = mask.transform.position;
 
-        _character.SetBool("Use", true);
+        _character.SetBool("IsOn", true);
         _maskGroup.SetBool("IsDisplayed", false);
         _mat.SetTexture("_MainTex", mask.Texture);
         _timer.CompleteTimeout();
@@ -50,7 +50,7 @@ public class MaskSelector : MonoBehaviour
         if (!Selected) return;
 
         Selected = null;
-        _character.SetBool("Use", false);
+        _character.SetBool("IsOn", false);
         SoundManager.Instance.PlaySound(takeMaskOff);
     }
 }
