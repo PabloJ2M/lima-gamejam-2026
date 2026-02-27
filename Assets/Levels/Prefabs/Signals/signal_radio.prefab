@@ -12,6 +12,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: signal_radio
       objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 625232462316721892}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _signalType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 625232462316721892}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4025728260600932452, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       propertyPath: sounds.Array.size
       value: 3
@@ -230,6 +270,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3d9417d3ab9f84498bc168f205f2c4, type: 3}
+--- !u!1 &625232462316721892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6115278242805397555, guid: bd3d9417d3ab9f84498bc168f205f2c4, type: 3}
+  m_PrefabInstance: {fileID: 6660982959291068119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2996073260422407991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8495091219083250144, guid: bd3d9417d3ab9f84498bc168f205f2c4, type: 3}

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6747616426606882108}
-  - component: {fileID: 5509805938104934615}
   - component: {fileID: 4025728260600932452}
+  - component: {fileID: 1367817540943332754}
   m_Layer: 0
   m_Name: signal_base
   m_TagString: Untagged
@@ -34,38 +34,6 @@ Transform:
   - {fileID: 3460610802768467706}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5509805938104934615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015435100209440790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a9172ef270c8a4888f78c54318c9ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _signal: {fileID: 0}
-  _duration: 3
-  _onVisualTask:
-    m_PersistentCalls:
-      m_Calls: []
-  _onAudioTask:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4025728260600932452}
-        m_TargetAssemblyTypeName: PropEmitter, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &4025728260600932452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _emitter: {fileID: 4841954656825693795}
   sounds: []
+--- !u!114 &1367817540943332754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015435100209440790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7a85ede46b73d4e9173a87543c8bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.Gameplay.SignalEmitter
+  _signalType: 0
+  _light: {fileID: 0}
+  _audioEmitter: {fileID: 4025728260600932452}
+  _duration: 1
 --- !u!1 &5687277569292694512
 GameObject:
   m_ObjectHideFlags: 0

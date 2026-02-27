@@ -12,6 +12,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: signal_televisor
       objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 8311414833828217310}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8311414833828217310}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
+      propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4025728260600932452, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       propertyPath: sounds.Array.size
       value: 3

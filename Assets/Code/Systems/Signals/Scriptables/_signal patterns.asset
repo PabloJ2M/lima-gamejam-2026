@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b1cae33e5a1f7449001bce049793cc, type: 3}
+  m_Name: _signal patterns
+  m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.Gameplay.SO_SignalDatabase
+  _patterns:
+  - {fileID: 11400000, guid: d59e8a4949994394eb4f094ab86c353d, type: 2}
+  - {fileID: 11400000, guid: e26591d276f8b7d46929db158e011061, type: 2}
+  - {fileID: 11400000, guid: 79fae6670e1a7f746a022539efc059d1, type: 2}
