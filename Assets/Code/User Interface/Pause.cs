@@ -10,7 +10,8 @@ public class Pause : MonoBehaviour
 
     private bool _isPaused;
 
-    private void Start() => _pauseButton.action.performed += PerformeKey;
+    private void OnEnable() => _pauseButton.action.performed += PerformeKey;
+    private void OnDisable() => _pauseButton.action.performed -= PerformeKey;
     private void PerformeKey(InputAction.CallbackContext ctx)
     {
         if (_isPaused) ButtonUnPause();

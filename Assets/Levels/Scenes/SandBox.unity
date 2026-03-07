@@ -1094,6 +1094,7 @@ GameObject:
   - component: {fileID: 405204551}
   - component: {fileID: 405204543}
   - component: {fileID: 405204550}
+  - component: {fileID: 405204552}
   m_Layer: 0
   m_Name: freelook camera
   m_TagString: Untagged
@@ -1278,35 +1279,10 @@ MonoBehaviour:
   BlendFinishedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 405204549}
-        m_TargetAssemblyTypeName: Unity.Cinemachine.CinemachineFollow, Unity.Cinemachine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 405204545}
-        m_TargetAssemblyTypeName: Unity.Cinemachine.CinemachinePanTilt, Unity.Cinemachine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 405204543}
-        m_TargetAssemblyTypeName: Unity.Cinemachine.CinemachineInputAxisController,
-          Unity.Cinemachine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 405204552}
+        m_TargetAssemblyTypeName: Unity.Cinemachine.CinemachineFreeLookHandler, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1332,6 +1308,21 @@ MonoBehaviour:
   AmplitudeGain: 0.5
   FrequencyGain: 0.5
   m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &405204552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405204542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a162384a3b4d80438994b4cf9f43a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Unity.Cinemachine.CinemachineFreeLookHandler
+  _controller: {fileID: 405204543}
+  _follow: {fileID: 405204549}
+  _tilt: {fileID: 405204545}
 --- !u!43 &407161141
 Mesh:
   m_ObjectHideFlags: 0
@@ -11096,6 +11087,7 @@ GameObject:
   - component: {fileID: 1657318232}
   - component: {fileID: 1657318236}
   - component: {fileID: 1657318237}
+  - component: {fileID: 1657318238}
   m_Layer: 5
   m_Name: 'canvas - [overlay]'
   m_TagString: Untagged
@@ -11212,6 +11204,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30154c7a903acd64aba009eaf42c54fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorHandler
+--- !u!114 &1657318238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657318231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa888f40516868144a20022dd608b07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lose
+  _cursorHandler: {fileID: 1657318237}
+  _pauseScreen: {fileID: 109530700}
+  _loseScreen: {fileID: 1650314301}
 --- !u!1 &1691265828
 GameObject:
   m_ObjectHideFlags: 0
@@ -11881,6 +11888,18 @@ MonoBehaviour:
   onEnemyAttacked:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 405204552}
+        m_TargetAssemblyTypeName: Unity.Cinemachine.CinemachineFreeLookHandler, Assembly-CSharp
+        m_MethodName: Disable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2029888454}
         m_TargetAssemblyTypeName: MaskSelector, Assembly-CSharp
         m_MethodName: TakeOff
@@ -11905,10 +11924,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1650314301}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1657318238}
+        m_TargetAssemblyTypeName: Lose, Assembly-CSharp
+        m_MethodName: TriggerLoseState
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

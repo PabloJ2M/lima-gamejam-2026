@@ -17,7 +17,6 @@ public class MaskSelector : MonoBehaviour
     [SerializeField] private EventReference putMaskOn;
     [SerializeField] private EventReference takeMaskOff;
 
-    private int _index;
     public SelectableMask Selected { get; private set; }
 
     private void OnEnable()
