@@ -26,7 +26,7 @@ public class ObservadoEnemy : EnemyBase {
     }
 
     private IEnumerator AttackRoutine() {
-        Tween.Position(transform, new Vector3(0f, 0f, 0f), 1);
+        Tween.Position(transform, new Vector3(0f, 0f, 1.5f), 1);
         yield return new WaitForSeconds(3f);
         Finish(EnemyResult.Failed);
     }
