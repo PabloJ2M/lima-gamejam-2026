@@ -10,11 +10,27 @@ public class TutorialController : MonoBehaviour
     public UnityEvent onEvent1;
     public UnityEvent onEvent2;
 
-    private void Start() => StartCoroutine(InitSequence());
-    private IEnumerator InitSequence()
+    private bool _isTutorialComplete;
+
+    private void Start() => StartCoroutine(TutorialSequence());
+
+    public void SkipTutorial()
+    {
+        if (_isTutorialComplete) return;
+        onEvent1?.Invoke();
+        StopAllCoroutines();
+        StartCoroutine(GameSequence());
+    }
+
+    private IEnumerator TutorialSequence()
     {
         yield return new WaitForSeconds(_timeToSkipTutorial);
         onEvent1?.Invoke();
+        StartCoroutine(GameSequence());
+    }
+    private IEnumerator GameSequence()
+    {
+        _isTutorialComplete = true;
         yield return new WaitForSeconds(time_to_off_lights);
         onEvent2?.Invoke();
     }

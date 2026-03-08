@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CursorHandler : MonoBehaviour
 {
-    private void Start() => CursorLock();
+    private void Start() => CursorUnlock();
 
     public void CursorLock() => SetCursorStatus(false);
     public void CursorUnlock() => SetCursorStatus(true);
