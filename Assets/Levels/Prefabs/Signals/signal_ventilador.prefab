@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &508199553033094591
+--- !u!1001 &1924778146469850654
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,70 +8,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2713447839495068800}
     m_Modifications:
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
+    - target: {fileID: 5966125791764596304, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
+      propertyPath: m_Name
+      value: Ventilador
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
+    - target: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: -0.75
       objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
+    - target: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
+    - target: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
+    - target: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
+    - target: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034512124465466693, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-      propertyPath: m_Name
-      value: Ventilador
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
---- !u!114 &6527920148942207100 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
+--- !u!114 &271636750359838105 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6744888131207331267, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-  m_PrefabInstance: {fileID: 508199553033094591}
+  m_CorrespondingSourceObject: {fileID: 1833848685631804295, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
+  m_PrefabInstance: {fileID: 1924778146469850654}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7d324a18e8f22842922fd0f86286cbd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &8153666556992541248 stripped
+  m_EditorClassIdentifier: Assembly-CSharp::RotateY
+--- !u!4 &4843077029682852596 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8514855838828533759, guid: 7b675f6f5b95fb24c90b3740c3699013, type: 3}
-  m_PrefabInstance: {fileID: 508199553033094591}
+  m_CorrespondingSourceObject: {fileID: 6449224350860877034, guid: 10113d20313100644b59ac02df7ff23c, type: 3}
+  m_PrefabInstance: {fileID: 1924778146469850654}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8650362708490318268
 PrefabInstance:
@@ -104,7 +88,7 @@ PrefabInstance:
     - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6527920148942207100}
+      objectReference: {fileID: 271636750359838105}
     - target: {fileID: 1367817540943332754, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       propertyPath: _onSignalEmitted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -214,10 +198,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5509805938104934615, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
-      propertyPath: _onVisualTask.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6527920148942207100}
-    - target: {fileID: 5509805938104934615, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       propertyPath: _onVisualTask.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -278,7 +258,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6747616426606882108, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8153666556992541248}
+      addedObject: {fileID: 4843077029682852596}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9fc82df82f538418a202e40f00cb48, type: 3}
 --- !u!4 &2713447839495068800 stripped

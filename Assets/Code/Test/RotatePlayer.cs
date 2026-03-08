@@ -1,11 +1,9 @@
 using FMODUnity;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class RotatePlayer : MonoBehaviour
 {
     public Transform cameraTransform;
-
     public float rotationSpeed = 6f;
 
     private bool resetSound = false;
@@ -14,13 +12,13 @@ public class RotatePlayer : MonoBehaviour
 
     [Header("Sounds")]
     [SerializeField] private EventReference[] chairSounds;
-    [SerializeField] private float soundStopThreshold = .5f;
+    [SerializeField] private float soundStopThreshold = 0.5f;
     [SerializeField] private float soundStartThreshold = 5f;
     private int direction;
 
     private void Update()
     {
-        // Direcci�n de la c�mara (PLANA)
+        // Direccion de la camara (PLANA)
         Vector3 camForward = cameraTransform.forward;
 
         camForward.y = 0f;
@@ -58,7 +56,7 @@ public class RotatePlayer : MonoBehaviour
         // Movimiento
         //controller.Move(moveDir * moveSpeed * Time.deltaTime);
 
-        // Rotaci�n suave hacia donde se mueve
+        // Rotacion suave hacia donde se mueve
         Quaternion targetRot = Quaternion.LookRotation(moveDir);
         transform.rotation = Quaternion.Slerp(
             transform.rotation,

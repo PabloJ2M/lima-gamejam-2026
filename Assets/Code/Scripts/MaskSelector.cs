@@ -10,7 +10,6 @@ public class MaskSelector : MonoBehaviour
 
     [SerializeField] private Animator _maskGroup;
     [SerializeField] private Animator _character;
-    [SerializeField] private Transform _targetIK;
     [SerializeField] private Material _mat;
 
     [Header("Sounds")]
@@ -34,8 +33,6 @@ public class MaskSelector : MonoBehaviour
     {
         Selected = mask;
         SoundManager.Instance.PlaySound(putMaskOn);
-
-        _targetIK.position = mask.transform.position;
 
         _character.SetBool("IsOn", true);
         _maskGroup.SetBool("IsDisplayed", false);
