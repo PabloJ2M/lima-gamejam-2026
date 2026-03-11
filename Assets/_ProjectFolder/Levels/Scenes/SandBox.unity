@@ -3064,6 +3064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715722085}
   - component: {fileID: 715722087}
+  - component: {fileID: 715722088}
   m_Layer: 0
   m_Name: signals
   m_TagString: Untagged
@@ -3104,27 +3105,15 @@ MonoBehaviour:
   _signalsPerRound: 3
   _speedMultiply: 1
   _startDelay: 0
-  _betweenDelay: 0.5
+  _betweenDelay: 0.25
   _completeDelay: 0
   _onBeginSequence:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1733817121}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1443721713}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 715722088}
+        m_TargetAssemblyTypeName: LightController, Assembly-CSharp
+        m_MethodName: SetLightIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3136,22 +3125,22 @@ MonoBehaviour:
   _onCompleteSequence:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1733817121}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 715722088}
+        m_TargetAssemblyTypeName: LightController, Assembly-CSharp
+        m_MethodName: SetLightIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1443721713}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 715722088}
+        m_TargetAssemblyTypeName: LightController, Assembly-CSharp
+        m_MethodName: TurnOffLights
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3184,6 +3173,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &715722088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715722084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9d0c2f21c8e424289cf9b494db585f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightController
+  _lightSequence:
+  - {fileID: 1733817123}
+  - {fileID: 1443721717}
 --- !u!1 &744967354
 GameObject:
   m_ObjectHideFlags: 0
@@ -10747,7 +10751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1443721714
 Transform:
   m_ObjectHideFlags: 0
@@ -10799,11 +10803,11 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443721713}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.045009896, b: 0, a: 1}
-  m_Intensity: 30
+  m_Intensity: 15
   m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -11974,7 +11978,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.844216, b: 0.435849, a: 1}
-  m_Intensity: 15
+  m_Intensity: 6
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12434,6 +12438,18 @@ MonoBehaviour:
       - m_Target: {fileID: 715722087}
         m_TargetAssemblyTypeName: UnityEngine.Gameplay.SignalController, Assembly-CSharp
         m_MethodName: StartSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 715722088}
+        m_TargetAssemblyTypeName: LightController, Assembly-CSharp
+        m_MethodName: TurnOnLights
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

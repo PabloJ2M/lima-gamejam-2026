@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8258795656525026398}
   - component: {fileID: 2152990908066184860}
+  - component: {fileID: 6354679194539013363}
+  - component: {fileID: 7404109531935885930}
   - component: {fileID: 9007105277834351906}
   m_Layer: 0
   m_Name: Spot Light 1
@@ -44,7 +46,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 0.9494121, b: 0.62352943, a: 1}
-  m_Intensity: 7
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 70
   m_InnerSpotAngle: 20
@@ -98,6 +100,46 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &6354679194539013363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406447292919995486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c76af5be0e1d940b9c84ce0c3bb67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightObject
+--- !u!114 &7404109531935885930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406447292919995486}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552f50fdf943c32428d344c8ec247fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Noise
+  _size: {x: 1, y: 2}
+  _onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2152990908066184860}
+        m_TargetAssemblyTypeName: UnityEngine.Light, UnityEngine
+        m_MethodName: set_intensity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9007105277834351906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +179,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6769569725374259044}
   - component: {fileID: 9088125237496202801}
+  - component: {fileID: 6033407032250464798}
+  - component: {fileID: 5466635363003542765}
   - component: {fileID: 7510360605566376881}
   m_Layer: 0
   m_Name: Spot Light 3
@@ -171,7 +215,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 0.9494121, b: 0.62352943, a: 1}
-  m_Intensity: 7
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 70
   m_InnerSpotAngle: 20
@@ -225,6 +269,46 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &6033407032250464798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635788857490218757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c76af5be0e1d940b9c84ce0c3bb67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightObject
+--- !u!114 &5466635363003542765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635788857490218757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552f50fdf943c32428d344c8ec247fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Noise
+  _size: {x: 1, y: 2}
+  _onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9088125237496202801}
+        m_TargetAssemblyTypeName: UnityEngine.Light, UnityEngine
+        m_MethodName: set_intensity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7510360605566376881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +382,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5093035065361215578}
   - component: {fileID: 9031843010903087931}
+  - component: {fileID: 1175800164395230519}
+  - component: {fileID: 5092882491959495437}
   - component: {fileID: 3252229453417852138}
   m_Layer: 0
   m_Name: Spot Light 2
@@ -332,7 +418,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 0.9494121, b: 0.62352943, a: 1}
-  m_Intensity: 7
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 70
   m_InnerSpotAngle: 20
@@ -386,6 +472,46 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1175800164395230519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839189519659968909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c76af5be0e1d940b9c84ce0c3bb67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightObject
+--- !u!114 &5092882491959495437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839189519659968909}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552f50fdf943c32428d344c8ec247fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Noise
+  _size: {x: 1, y: 2}
+  _onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9031843010903087931}
+        m_TargetAssemblyTypeName: UnityEngine.Light, UnityEngine
+        m_MethodName: set_intensity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3252229453417852138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,12 +600,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4632641214292879878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 019e4a1de36483e4d872df8b9e7b1334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaterialColor
   _index: 0
+  _min: {r: 1, g: 1, b: 1, a: 1}
+  _max: {r: 2.9960787, g: 2.9960787, b: 2.9960787, a: 1}
+  _disable: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &5404779213791342780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebba17342ecc8df438efde62dd982dde, type: 3}
