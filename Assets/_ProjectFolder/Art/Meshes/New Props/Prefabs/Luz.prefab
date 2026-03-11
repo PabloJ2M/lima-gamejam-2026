@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f50fdf943c32428d344c8ec247fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Noise
-  _size: {x: 1, y: 2}
+  _size: {x: 0.5, y: 2}
   _onValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f50fdf943c32428d344c8ec247fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Noise
-  _size: {x: 1, y: 2}
+  _size: {x: 0.5, y: 2}
   _onValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f50fdf943c32428d344c8ec247fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Noise
-  _size: {x: 1, y: 2}
+  _size: {x: 0.5, y: 2}
   _onValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaterialColor
   _index: 0
   _min: {r: 1, g: 1, b: 1, a: 1}
-  _max: {r: 2.9960787, g: 2.9960787, b: 2.9960787, a: 1}
+  _max: {r: 5.9921575, g: 5.9921575, b: 5.9921575, a: 1}
   _disable: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &5404779213791342780 stripped
 Transform:
